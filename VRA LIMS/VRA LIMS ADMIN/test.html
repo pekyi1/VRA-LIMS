@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dual Line Charts</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f8;
+        }
+
+        .chart-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .chart-container {
+            width: 600px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            text-align: center;
+            color: #202045;
+            font-weight: bold;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="chart-wrapper">
+        <!-- First Chart Container -->
+        <h3>Daily Active Users</h3>
+        <div class="chart-container">
+            <canvas id="dailyActiveUsersChart"></canvas>
+        </div>
+
+        <!-- Second Chart Container -->
+        <h3>Inactive Users</h3>
+        <div class="chart-container">
+            <canvas id="inactiveUsersChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        // Configuration for the first chart
+        const dailyCtx = document.getElementById('dailyActiveUsersChart').getContext('2d');
+        const dailyActiveUsersChart = new Chart(dailyCtx, {
+            type: 'line',
+            data: {
+                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+                datasets: [{
+                    label: 'Loyal Customers',
+                    data: [20, 15, 25, 40, 35],
+                    borderColor: '#202045',
+                    backgroundColor: 'rgba(32, 32, 69, 0.1)',
+                    fill: true,
+                    tension: 0.4,
+                    pointBackgroundColor: '#202045',
+                    pointBorderColor: '#202045',
+                    pointRadius: 6,
+                    pointHoverRadius: 8,
+                    pointStyle: 'circle',
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'bottom',
+                        labels: {
+                            usePointStyle: true,
+                            pointStyle: 'rectRounded',
+                            font: {
+                                size: 14
+                            }
+                        }
+                    },
+                    tooltip: {
+                        enabled: true,
+                    },
+                },
+                scales: {
+                    x: {
+                        title: {
+                            display: false
+                        },
+                        grid: {
+                            display: false,
+                        },
+                    },
+                    y: {
+                        ticks: {
+                            display: false,
+                        },
+                        grid: {
+                            drawBorder: false,
+                        },
+                    }
+                }
+            }
+        });
+
+        // Configuration for the second chart (Identical to the first)
+        const inactiveCtx = document.getElementById('inactiveUsersChart').getContext('2d');
+        const inactiveUsersChart = new Chart(inactiveCtx, {
+            type: 'line',
+            data: {
+                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+                datasets: [{
+                    label: 'Loyal Customers',
+                    data: [20, 15, 25, 40, 35],
+                    borderColor: '#202045',
+                    backgroundColor: 'rgba(32, 32, 69, 0.1)',
+                    fill: true,
+                    tension: 0.4,
+                    pointBackgroundColor: '#202045',
+                    pointBorderColor: '#202045',
+                    pointRadius: 6,
+                    pointHoverRadius: 8,
+                    pointStyle: 'circle',
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'bottom',
+                        labels: {
+                            usePointStyle: true,
+                            pointStyle: 'rectRounded',
+                            font: {
+                                size: 14
+                            }
+                        }
+                    },
+                    tooltip: {
+                        enabled: true,
+                    },
+                },
+                scales: {
+                    x: {
+                        title: {
+                            display: false
+                        },
+                        grid: {
+                            display: false,
+                        },
+                    },
+                    y: {
+                        ticks: {
+                            display: false,
+                        },
+                        grid: {
+                            drawBorder: false,
+                        },
+                    }
+                }
+            }
+        });
+
+        // Adding a plugin to draw a vertical line at the fourth data point for both charts
+        Chart.plugins.register({
+            afterDatasetsDraw: function (chart) {
+                const ctx = chart.ctx;
+                const activeIndex = 3; // Index of the data point to draw the line
+                if (chart.tooltip._active && chart.tooltip._active.length) {
+                    const activePoint = chart.tooltip._active[0];
+                    const x = chart.getDatasetMeta(0).data[activeIndex].x;
+                    const topY = chart.scales.y.top;
+                    const bottomY = chart.scales.y.bottom;
+                    ctx.save();
+                    ctx.beginPath();
+                    ctx.moveTo(x, topY);
+                    ctx.lineTo(x, bottomY);
+                    ctx.lineWidth = 2;
+                    ctx.setLineDash([5, 5]); // Dashed line effect
+                    ctx.strokeStyle = '#e64a19';
+                    ctx.stroke();
+                    ctx.restore();
+                }
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

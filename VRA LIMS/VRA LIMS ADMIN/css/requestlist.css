@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FFF;
+}
+
+/* MAIN SECTION STYLES */
+.main-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    right: 0;
+    margin-top: 60px;
+    /* border: 1px solid black; */
+    height: 100%;
+    background: #F7F7F8;
+}
+
+.main-upper {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.upper-left {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+}
+
+.upper-left>div {
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.upper-left>div:hover {
+    background-color: #f2f2f2;
+}
+
+.upper-left>div>p:first-of-type {
+    color: #464E5F;
+    font-size: 13.5px;
+    margin: auto;
+}
+
+.upper-left>div>p:nth-of-type(2) {
+    padding: 2px 5px;
+    margin: auto;
+    margin-left: 0;
+    border-radius: 10px;
+    background-color: #9797971e;
+    font-size: 11.5px;
+    color: #979797;
+}
+
+.upper-left .active {
+    border-bottom: 4px solid #1B3764;
+}
+
+.upper-left .active p:nth-child(2) {
+    background-color: #1B3764;
+    color: #EBEEEF;
+}
+
+.upper-middle {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upper-middle input[type="date"] {
+    border: none;
+    
+    /* Light background */
+   
+    
+   
+    font-size: 14px;
+    color: #6c757d;
+    cursor: pointer;
+    font-family: inherit;
+    /* Use the same font as the rest of the page */
+    width: 100%;
+}
+
+/* Hide the default calendar icon in WebKit browsers */
+.upper-middle input[type="date"]::-webkit-calendar-picker-indicator {
+    background: url('https://img.icons8.com/material-outlined/24/000000/calendar--v1.png') no-repeat;
+    background-size: 16px 16px;
+    color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    position: relative;
+}
+
+/* Remove the default appearance on different browsers */
+.upper-middle input[type="date"]::-webkit-inner-spin-button,
+.upper-middle input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+.upper-middle input[type="date"] {
+    appearance: none;
+    /* Removes default styling */
+    -webkit-appearance: none;
+    /* Safari */
+    -moz-appearance: textfield;
+    /* Firefox */
+}
+
+/* Add padding to the left to make space for the calendar icon */
+.upper-middle input[type="date"] {
+    padding-left: 30px;
+    position: relative;
+}
+
+/* For Firefox, we need to remove the default icon */
+.upper-middle input[type="date"]::-moz-focus-inner {
+    border: 0;
+}
+
+.upper-right button {
+    padding: 17px 40px;
+    cursor: pointer;
+    border: none;
+    background-color: rgba(0, 149, 255, 0.10);
+    
+}
+
+.main-middle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.middle-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    flex: 1;
+}
+
+
+.middle-left .input-box {
+    width: 180px;
+    max-width: 50vw;
+    position: relative;
+}
+
+.middle-left .input-box .search {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.middle-left .input-box input {
+    border: none;
+    background: #F9FAFB;
+    width: 100%;
+    height: 35px;
+    border-radius: 13px;
+    padding: 3px 40px;
+}
+
+.middle-left .input-box input:focus {
+    outline: 1.5px solid #1B3764;
+}
+
+.middle-left .input-box i {
+    font-size: 20px;
+    color: #1B3764;
+}
+
+.middle-centre {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.middle-centre>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    padding: 0 8px;
+    border-radius: 20px;
+    font-size: 13px;
+    margin-right: 8px;
+    color: #464E5F;
+    border: 1px solid #979797;
+    cursor: pointer;
+    transition: 0.15s ease;
+}
+
+.middle-centre>div:hover {
+    border: 1px solid #1B3764;
+    background-color: #1B3764;
+    color: #FFF;
+    opacity: 0.7;
+}
+
+.middle-centre>div.active {
+    color: #FFF;
+    background-color: #1B3764;
+    border-color: #1B3764;
+}
+
+.middle-centre>div>p {
+    margin: 0;
+
+}
+
+.middle-right {
+    flex: 1;
+}
+
+.middle-right .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.middle-right .page-btn {
+    background-color: #f5f5f5;
+    border: 0.5px solid #EEE;
+    padding: 6px 8px;
+    margin: 0 1px;
+    color: #8E8E8E;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.middle-right .page-btn:hover {
+    background-color: #ddd;
+}
+
+.middle-right .page-btn.active {
+    background-color: #1B3764;
+    color: white;
+    font-weight: bold;
+}
+
+.middle-right #prev,
+.middle-right #next {
+    font-weight: bold;
+}
+
+.middle-right span {
+    margin: 0 10px;
+}
+
+.main-table {
+    display: flex;
+    flex-direction: column;
+}
+
+/* STYLING FOR THE TABLE */
+.main-table .header-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+}
+
+.header-row div {
+    color: rgba(3, 2, 44, 0.7);
+    font-size: 13px;
+    text-wrap: nowrap;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.table-contents {
+    display: flex;
+    flex-direction: column;
+    padding: 14px;
+    gap: 20px;
+}
+
+.table-contents>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #FFF;
+    border-radius: 10px;
+    height: 45px;
+    padding: 0 10px;
+}
+
+.table-contents>div>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-contents>div>div p {
+    font-family: Nunito;
+    color: #030229;
+    font-size: 12px;
+    text-wrap: nowrap;
+    padding: 3px 8px;
+    border-radius: 20px;
+}
+
+.table-contents>div>div.issued p {
+    background-color: rgba(96, 181, 39, 0.2);
+    color: rgb(96, 181, 39);
+}
+
+.table-contents>div>div.overdue p {
+    color: rgb(255, 57, 50);
+    background-color: rgba(255, 57, 50, 0.2);
+}
+.table-contents>div>div.requested p {
+    color: rgb(255, 173, 13);
+    background-color: rgba(255, 173, 13, 0.2);
+}
+
+
+.table-contents>div>div img {
+    width: 30px;
+    border-radius: 6px;
+}
+
+.table-contents>div>div:last-of-type {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.table-contents>div>div:last-of-type i:first-of-type {
+    color: #FFCF00;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.table-contents>div>div:last-of-type i:nth-of-type(2) {
+    color: #FF564F;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.table-contents>div>div:last-of-type i:nth-of-type(3) {
+    color: #1B3764;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.table-contents>div>div:last-of-type i:nth-of-type(4) {
+    color: #969AA0;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+}

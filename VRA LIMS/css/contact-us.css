@@ -1,0 +1,504 @@
+/* Base styles */
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+}
+
+header {
+    background-color: #0a2b52;
+    padding: 20px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    flex-grow: 1; /* Allow nav-links to grow and take up available space */
+    justify-content: center; /* Center the nav links */
+}
+
+.nav-links li {
+    margin: 12px;
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #FFCA42;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin-left: 10px;
+    color: #fff;
+}
+
+nav .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    right: 0;
+    top: 15px;
+}
+
+.librarian-login, .user-login {
+    padding: 13px 33px;
+    font-size: 19px;
+    font-family: 'Cardo', serif;
+    font-weight: 700;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.librarian-login {
+    background: #FFCA42;
+    color: #1B3764;
+}
+
+.user-login {
+    border: 1px solid #FFCA42;
+    color: white;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.show {
+        display: flex;
+        margin-top: 50px;
+    }
+
+    .nav-buttons {
+        position: static;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: 10px;
+    }
+
+    .librarian-login, .user-login {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    nav .logo {
+        font-size: 24px;
+    }
+
+    nav ul li a {
+        font-size: medium;
+    }
+
+    .librarian-login, .user-login {
+        font-size: 16px;
+    }
+}
+
+/* Tablet view (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .nav {
+        padding: 15px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .nav-buttons {
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+        margin-left: auto;
+    }
+
+    .librarian-login, .user-login {
+        width: auto;
+        text-align: right;
+    }
+}
+
+/* Desktop view (1025px and above) */
+@media (min-width: 1025px) {
+    .nav {
+        padding: 20px 30px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center; /* Center the nav links */
+        flex-grow: 1; /* Allow it to take up space */
+    }
+
+    .nav-buttons {
+        flex-direction: row;
+        align-items: center;
+        margin-left: auto;
+    }
+
+    .librarian-login, .user-login {
+        width: auto;
+        text-align: right;
+    }
+}
+
+
+/* Contact Us Section */
+.contact-us {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    background-color: #0a2b52; 
+    color: white;
+    min-height: 300px; 
+    
+}
+
+.line {
+    width: 55px;
+    border: 3px solid #FFCA42;
+    margin: 20px auto;
+}
+
+.contact-us h1 {
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+    font-family: Cardo;
+    font-weight: 700;
+    line-height: 55px;
+    word-wrap: break-word
+}
+
+.contact-us p {
+    margin: 10px 0;
+    max-width: 600px; 
+    color: #B4C7E7;
+    font-size: 19px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 34.20px;
+    word-wrap: break-word
+}
+
+
+/* Keep in Touch Section */
+.keep-in-touch {
+    text-align: center;
+    padding: 40px;
+    background-color: #ffffff;
+    color: #1B3764;
+}
+
+.keep-in-touch h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Cardo', serif;
+    color: #1B3764;
+}
+
+.keep-in-touch p {
+    font-size: 1rem;
+    color: #969AA0;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Contact Methods Layout */
+.contact-methods {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;
+    max-width: 1000px; 
+    margin: 0 auto;
+}
+
+
+
+.contact-item img {
+    width: 40px; 
+    height: 40px;
+    margin-right: 15px;
+}
+
+.contact-text p {
+    margin: 0;
+    font-size: 1rem;
+    color: #969AA0;
+    line-height: 1.4;
+    font-family: Inter;
+}
+
+.contact-text strong {
+    color: #1B3764;
+    font-size: 15px;
+    font-family: Cardo;
+    font-weight: 700;
+    line-height: 52px;
+    word-wrap: break-word
+}
+
+
+
+/* Main styles for the location list */
+.location-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    white-space: nowrap; 
+    overflow-x: auto; 
+}
+
+.location-item {
+    text-align: center;
+    flex: 1;
+    margin: 0 10px; /* Add some margin between the location items */
+}
+
+.location-item img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.location-item p {
+    color: #969AA0;
+    font-size: 18px;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 30.60px;
+    word-wrap: break-word;
+}
+
+.location-item strong {
+    color: #1B3764;
+    font-size: 24px;
+    font-family: Cardo;
+    font-weight: 700;
+    line-height: 28.80px;
+    word-wrap: break-word;
+}
+
+/* Responsive styling */
+
+/* Tablet view (768px and below) */
+@media (max-width: 768px) {
+    .library-locations {
+        padding: 40px 10px;
+    }
+
+    .library-locations h2 {
+        font-size: 2rem;
+    }
+
+    .location-list {
+        flex-direction: column; /* Stack the location items vertically */
+        align-items: center; /* Center the location items */
+        white-space: normal; /* Allow text wrapping on smaller screens */
+    }
+
+    .location-item {
+        margin-bottom: 20px; /* Add space between each location item */
+    }
+
+    .location-item img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .location-item p {
+        font-size: 16px;
+    }
+
+    .location-item strong {
+        font-size: 20px;
+    }
+}
+
+/* Mobile view (480px and below) */
+@media (max-width: 480px) {
+    .library-locations {
+        padding: 30px 10px;
+    }
+
+    .library-locations h2 {
+        font-size: 1.8rem;
+    }
+
+    .location-list {
+        white-space: normal; /* Allow wrapping */
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .location-item {
+        margin-bottom: 15px; /* Reduce margin for smaller devices */
+    }
+
+    .location-item img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .location-item p {
+        font-size: 14px;
+    }
+
+    .location-item strong {
+        font-size: 18px;
+    }
+}
+
+
+/* FAQ Section */
+/* FAQ Section */
+
+.faq {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.faq h2 {
+    font-size: 2.5rem;
+    color: #1B3764;
+    text-align: center;
+    font-family: 'Cardo', serif;
+    margin-bottom: 30px;
+    border-bottom: 0.8px solid #ffd700;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.faq ul {
+    display: flex;
+    flex-wrap: wrap; 
+    list-style: none;
+    padding: 0;
+    max-width: 900px; 
+    margin: 0 auto; /* Center the list */
+    text-align: left;
+    justify-content: space-between; 
+}
+
+.faq ul li {
+    width: 48%; 
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+.faq ul li .question {
+    font-size: 1.2rem;
+    font-family: 'Inter', sans-serif;
+    color: #1B3764;
+    position: relative;
+}
+
+.faq ul li .question::before {
+    content: "●";
+    color: #ffd700;
+    margin-right: 10px;
+}
+
+.faq ul li .answer {
+    display: none;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    color: #969AA0;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.faq ul li.active .answer {
+    display: block;
+}
+
+.faq ul li .question:hover {
+    color: #ffd700;
+    transition: color 0.3s ease;
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+    .faq ul li {
+        width: 100%; 
+    }
+}
+
+
+
+/* Footer */
+footer {
+    background-color: #1B3764;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+        overflow-x: hidden;
+}
