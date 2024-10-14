@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/sidebar.css">
     <link rel="stylesheet" href="css/systems-index.css">
+    <link rel="stylesheet" href="css/system-configuration.css">
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Systems</title>
@@ -120,7 +121,7 @@
     </nav>
     <nav class="header">
         <div class="header-left">
-            <h1 style="color: #CCD1D2;">Systems</h1>
+            <h1 style="color: #CCD1D2;">System<span style="color: #1B3764;">>>System Configuration</span></h1>
         </div>
         <div class="header-middle">
             <div class="input-box">
@@ -164,43 +165,196 @@
         </div>
     </nav>
     <section class="main-section">
-    <div class="systems-sidebar">
-        <div>
-            <h1>Systems</h1>
+        <div class="systems-sidebar">
+            <div>
+                <h1>Systems</h1>
+            </div>
+            <div id="nav-systems-config" class="systems-option active">
+                <p>System Configuration</p>
+            </div>
+            <div id="nav-content" class="systems-option">
+                <p>Content</p>
+            </div>
+            <div id="nav-indexes" class="systems-option">
+                <p>Biblio Indexes</p>
+            </div>
+            <div id="nav-modules" class="systems-option">
+                <p>Modules</p>
+            </div>
+            <div id="nav-librarian" class="systems-option">
+                <p>Librarian & System Users</p>
+            </div>
+            <div id="nav-user-group" class="systems-option">
+                <p>User Group</p>
+            </div>
+            <div id="nav-holiday" class="systems-option">
+                <p>Holiday Setting</p>
+            </div>
+            <div id="nav-system-log" class="systems-option">
+                <p>System Log</p>
+            </div>
+            <div id="nav-database" class="systems-option">
+                <p>Database Backup</p>
+            </div>
         </div>
-        <div id="nav-systems-config" class="systems-option">
-            <p>System Configuration</p>
-        </div>
-        <div id="nav-content" class="systems-option">
-            <p>Content</p>
-        </div>
-        <div id="nav-indexes" class="systems-option">
-            <p>Biblio Indexes</p>
-        </div>
-        <div id="nav-modules" class="systems-option">
-            <p>Modules</p>
-        </div>
-        <div id="nav-librarian" class="systems-option">
-            <p>Librarian & System Users</p>
-        </div>
-        <div id="nav-user-group" class="systems-option">
-            <p>User Group</p>
-        </div>
-        <div id="nav-holiday" class="systems-option">
-            <p>Holiday Setting</p>
-        </div>
-        <div id="nav-system-log" class="systems-option">
-            <p>System Log</p>
-        </div>
-        <div id="nav-database" class="systems-option">
-            <p>Database Backup</p>
-        </div>
-    </div>
-        <div style="background: #F7F7F8;" class="main-right">
-            <div class="right-header">
+        <div class="main-right">
+            <div class="a" id="back-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path
+                        d="M16.0433 0.891113C7.38412 0.891113 0.327942 6.66301 0.327942 13.7748C0.327942 20.8737 7.38412 26.6585 16.0433 26.6585C24.7181 26.6585 31.7586 20.8737 31.7586 13.7748C31.7586 6.78355 24.9547 1.08716 16.4829 0.896066L16.0433 0.891113Z"
+                        fill="white" />
+                    <path opacity="0.5"
+                        d="M25.978 28.3204C26.8805 29.1294 26.8805 30.4405 26.0081 31.2774C25.5569 31.6959 24.9853 31.8911 24.3836 31.8911C23.8121 31.8911 23.2405 31.6959 22.8193 31.2774L12.3205 21.5975C11.8994 21.207 11.6587 20.677 11.6587 20.119C11.6587 19.5611 11.8994 19.0311 12.3205 18.6406L22.8193 8.96067C23.6917 8.12379 25.1056 8.12379 26.0081 8.96067C26.8805 9.76965 26.8805 11.1087 25.978 11.9176L17.1036 20.119L25.978 28.3204Z"
+                        fill="#030229" />
+                </svg>
+            </div>
+            <div class="b">
+                <h1>System Configuration Details</h1>
+            </div>
+            <div class="d">
                 <div>
-                    <input type="date" id="date-input">
+                    <div>
+                        <p>Library Name</p>
+                    </div>
+                    <div><input type="text" placeholder="Library Management System"></div>
                 </div>
+                <div>
+                    <div>
+                        <p>Library Email</p>
+                    </div>
+                    <div><input type="text" placeholder="fredpekyi01@gmail.com"></div>
+                </div>
+            </div>
+            <div class="d">
+                <div>
+                    <div>
+                        <p>Library Address</p>
+                    </div>
+                    <div><input type="text" placeholder="P.O.Box HE 2345"></div>
+                </div>
+                <div>
+                    <div>
+                        <p>Library Contact</p>
+                    </div>
+                    <div><input type="text" placeholder="+233 ### ### ###"></div>
+                </div>
+            </div>
+            <div class="g">
+                <div>
+                    <div>
+                        <p>Library Hours</p>
+                    </div>
+                    <div class="time-container">
+                        <!-- Start Time -->
+                        <div class="time-input">
+                            <label for="start-time-hour">Start Time</label>
+                            <div class="input-group">
+                                <input type="number" id="start-time-hour" min="1" max="12" value="8">
+                                <span>:</span>
+                                <input type="number" id="start-time-minute" min="0" max="59" value="00">
+                                <div class="ampm-container">
+                                    <button class="ampm-button selected" id="start-am"
+                                        style="border-right: none;  border-radius: 3px 0 0 3px;">AM</button>
+                                    <button class="ampm-button" id="start-pm"
+                                        style="border-left: none;    border-radius: 0 3px 3px 0;">PM</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Closing Time -->
+                        <div class="time-input">
+                            <label for="closing-time-hour">Closing Time</label>
+                            <div class="input-group">
+                                <input type="number" id="closing-time-hour" min="1" max="12" value="4">
+                                <span>:</span>
+                                <input type="number" id="closing-time-minute" min="0" max="59" value="00">
+                                <div class="ampm-container">
+                                    <button class="ampm-button" id="closing-am"
+                                        style="border-right: none;  border-radius: 3px 0 0 3px;">AM</button>
+                                    <button class="ampm-button selected" id="closing-pm"
+                                        style="border-left: none;    border-radius: 0 3px 3px 0;">PM</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <p>Systems Language</p>
+                    </div>
+                    <div class="custom-select-wrapper">
+                        <select>
+                            <option selected disabled>Select a Language</option>
+                            <option value="1">English</option>
+                            <option value="2">French</option>
+                            <option value="3">Spanish</option>
+                            <option value="4">Twi</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="g">
+                <div>
+                    <div>
+                        <p>Max Borrow Limits</p>
+                    </div>
+                    <div class="custom-select-wrapper">
+                        <select>
+                            <option selected disabled>0</option>
+                            <option value="1">5</option>
+                            <option value="2">10</option>
+                            <option value="3">15</option>
+                            <option value="4">20</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <p>Borrow Duration</p>
+                    </div>
+                    <div class="custom-select-wrapper">
+                        <select>
+                            <option selected disabled></option>
+                            <option value="1">1 week</option>
+                            <option value="2">2 weeks</option>
+                            <option value="3">3 weeks</option>
+                            <option value="4">4 weeks</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="g">
+                <div>
+                    <div>
+                        <p>Auto-Logout Time</p>
+                    </div>
+                    <div class="custom-select-wrapper">
+                        <select>
+                            <option selected disabled>0 mins</option>
+                            <option value="1">30 mins</option>
+                            <option value="2">40 mins</option>
+                            <option value="3">1 hour</option>
+                            <option value="4">2 hours</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <p>E-book Access Duration</p>
+                    </div>
+                    <div class="custom-select-wrapper">
+                        <select>
+                            <option selected disabled></option>
+                            <option value="1">1 week</option>
+                            <option value="2">2 weeks</option>
+                            <option value="3">3 weeks</option>
+                            <option value="4">4 weeks</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="i">
+                <button>Update Details</button>
             </div>
         </div>
     </section>
@@ -237,9 +391,41 @@
         document.getElementById("nav-systems-config").addEventListener("click", function () {
             window.location.href = "./system-configuration.html";
         });
-         document.getElementById("nav-content").addEventListener("click", function () {
-                window.location.href = "./content.html";
+         document.getElementById("back-btn").addEventListener("click", function () {
+                window.location.href = "./systems-index.html";
             });
+              document.getElementById("nav-content").addEventListener("click", function () {
+                    window.location.href = "./content.html";
+                });
+    </script>
+    <script>
+        // Toggle AM/PM for Start Time
+        const startAM = document.getElementById('start-am');
+        const startPM = document.getElementById('start-pm');
+
+        startAM.addEventListener('click', function () {
+            startAM.classList.add('selected');
+            startPM.classList.remove('selected');
+        });
+
+        startPM.addEventListener('click', function () {
+            startPM.classList.add('selected');
+            startAM.classList.remove('selected');
+        });
+
+        // Toggle AM/PM for Closing Time
+        const closingAM = document.getElementById('closing-am');
+        const closingPM = document.getElementById('closing-pm');
+
+        closingAM.addEventListener('click', function () {
+            closingAM.classList.add('selected');
+            closingPM.classList.remove('selected');
+        });
+
+        closingPM.addEventListener('click', function () {
+            closingPM.classList.add('selected');
+            closingAM.classList.remove('selected');
+        });
     </script>
     <script src="../script/report&analytics-graph-data.js"></script>
 </body>

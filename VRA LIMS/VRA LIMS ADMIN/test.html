@@ -4,209 +4,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dual Line Charts</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Time Picker</title>
     <style>
-        body,
-        html {
-            margin: 0;
-            padding: 0;
+        body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f8;
         }
 
-        .chart-wrapper {
+        .time-container {
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            justify-content: space-between;
+            max-width: 400px;
+            margin: 20px auto;
         }
 
-        .chart-container {
-            width: 600px;
-            height: 400px;
+        .time-input {
             display: flex;
-            justify-content: center;
             align-items: center;
-            margin: 20px;
-            background: white;
-            padding: 30px;
-            border-radius: 16px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            gap: 10px;
         }
 
-        h3 {
+        .time-input label {
+            font-size: 14px;
+            color: #2C3E50;
+        }
+
+        .input-group {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            background-color: #f8f8f8;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .input-group input {
+            width: 40px;
             text-align: center;
-            color: #202045;
-            font-weight: bold;
+            border: none;
+            background-color: transparent;
+            font-size: 16px;
+            outline: none;
+            color: #2C3E50;
         }
 
-        canvas {
-            width: 100%;
-            height: 100%;
+        .input-group select {
+            background-color: #f8f8f8;
+            border: none;
+            font-size: 16px;
+            color: #2C3E50;
+            cursor: pointer;
+            outline: none;
+            padding: 0 5px;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus {
+            outline: none;
+            border: 1px solid #1E88E5;
+        }
+
+        .input-group select option {
+            background-color: white;
+            color: #2C3E50;
+        }
+
+        /* Styles for AM/PM buttons */
+        .ampm-button {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #f8f8f8;
+            font-size: 16px;
+            cursor: pointer;
+            color: #2C3E50;
+        }
+
+        .ampm-button.selected {
+            background-color: #1E88E5;
+            color: white;
+        }
+
+        .ampm-container {
+            display: flex;
+            gap: 5px;
         }
     </style>
 </head>
 
 <body>
-
-    <div class="chart-wrapper">
-        <!-- First Chart Container -->
-        <h3>Daily Active Users</h3>
-        <div class="chart-container">
-            <canvas id="dailyActiveUsersChart"></canvas>
+    <div class="time-container">
+        <!-- Start Time -->
+        <div class="time-input">
+            <label for="start-time-hour">Start Time</label>
+            <div class="input-group">
+                <input type="number" id="start-time-hour" min="1" max="12" value="8">
+                <span>:</span>
+                <input type="number" id="start-time-minute" min="0" max="59" value="00">
+                <div class="ampm-container">
+                    <button class="ampm-button selected" id="start-am">AM</button>
+                    <button class="ampm-button" id="start-pm">PM</button>
+                </div>
+            </div>
         </div>
 
-        <!-- Second Chart Container -->
-        <h3>Inactive Users</h3>
-        <div class="chart-container">
-            <canvas id="inactiveUsersChart"></canvas>
+        <!-- Closing Time -->
+        <div class="time-input">
+            <label for="closing-time-hour">Closing Time</label>
+            <div class="input-group">
+                <input type="number" id="closing-time-hour" min="1" max="12" value="4">
+                <span>:</span>
+                <input type="number" id="closing-time-minute" min="0" max="59" value="00">
+                <div class="ampm-container">
+                    <button class="ampm-button" id="closing-am">AM</button>
+                    <button class="ampm-button selected" id="closing-pm">PM</button>
+                </div>
+            </div>
         </div>
     </div>
 
     <script>
-        // Configuration for the first chart
-        const dailyCtx = document.getElementById('dailyActiveUsersChart').getContext('2d');
-        const dailyActiveUsersChart = new Chart(dailyCtx, {
-            type: 'line',
-            data: {
-                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
-                datasets: [{
-                    label: 'Loyal Customers',
-                    data: [20, 15, 25, 40, 35],
-                    borderColor: '#202045',
-                    backgroundColor: 'rgba(32, 32, 69, 0.1)',
-                    fill: true,
-                    tension: 0.4,
-                    pointBackgroundColor: '#202045',
-                    pointBorderColor: '#202045',
-                    pointRadius: 6,
-                    pointHoverRadius: 8,
-                    pointStyle: 'circle',
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        display: true,
-                        position: 'bottom',
-                        labels: {
-                            usePointStyle: true,
-                            pointStyle: 'rectRounded',
-                            font: {
-                                size: 14
-                            }
-                        }
-                    },
-                    tooltip: {
-                        enabled: true,
-                    },
-                },
-                scales: {
-                    x: {
-                        title: {
-                            display: false
-                        },
-                        grid: {
-                            display: false,
-                        },
-                    },
-                    y: {
-                        ticks: {
-                            display: false,
-                        },
-                        grid: {
-                            drawBorder: false,
-                        },
-                    }
-                }
-            }
+        // Toggle AM/PM for Start Time
+        const startAM = document.getElementById('start-am');
+        const startPM = document.getElementById('start-pm');
+
+        startAM.addEventListener('click', function () {
+            startAM.classList.add('selected');
+            startPM.classList.remove('selected');
         });
 
-        // Configuration for the second chart (Identical to the first)
-        const inactiveCtx = document.getElementById('inactiveUsersChart').getContext('2d');
-        const inactiveUsersChart = new Chart(inactiveCtx, {
-            type: 'line',
-            data: {
-                labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
-                datasets: [{
-                    label: 'Loyal Customers',
-                    data: [20, 15, 25, 40, 35],
-                    borderColor: '#202045',
-                    backgroundColor: 'rgba(32, 32, 69, 0.1)',
-                    fill: true,
-                    tension: 0.4,
-                    pointBackgroundColor: '#202045',
-                    pointBorderColor: '#202045',
-                    pointRadius: 6,
-                    pointHoverRadius: 8,
-                    pointStyle: 'circle',
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        display: true,
-                        position: 'bottom',
-                        labels: {
-                            usePointStyle: true,
-                            pointStyle: 'rectRounded',
-                            font: {
-                                size: 14
-                            }
-                        }
-                    },
-                    tooltip: {
-                        enabled: true,
-                    },
-                },
-                scales: {
-                    x: {
-                        title: {
-                            display: false
-                        },
-                        grid: {
-                            display: false,
-                        },
-                    },
-                    y: {
-                        ticks: {
-                            display: false,
-                        },
-                        grid: {
-                            drawBorder: false,
-                        },
-                    }
-                }
-            }
+        startPM.addEventListener('click', function () {
+            startPM.classList.add('selected');
+            startAM.classList.remove('selected');
         });
 
-        // Adding a plugin to draw a vertical line at the fourth data point for both charts
-        Chart.plugins.register({
-            afterDatasetsDraw: function (chart) {
-                const ctx = chart.ctx;
-                const activeIndex = 3; // Index of the data point to draw the line
-                if (chart.tooltip._active && chart.tooltip._active.length) {
-                    const activePoint = chart.tooltip._active[0];
-                    const x = chart.getDatasetMeta(0).data[activeIndex].x;
-                    const topY = chart.scales.y.top;
-                    const bottomY = chart.scales.y.bottom;
-                    ctx.save();
-                    ctx.beginPath();
-                    ctx.moveTo(x, topY);
-                    ctx.lineTo(x, bottomY);
-                    ctx.lineWidth = 2;
-                    ctx.setLineDash([5, 5]); // Dashed line effect
-                    ctx.strokeStyle = '#e64a19';
-                    ctx.stroke();
-                    ctx.restore();
-                }
-            }
+        // Toggle AM/PM for Closing Time
+        const closingAM = document.getElementById('closing-am');
+        const closingPM = document.getElementById('closing-pm');
+
+        closingAM.addEventListener('click', function () {
+            closingAM.classList.add('selected');
+            closingPM.classList.remove('selected');
         });
 
+        closingPM.addEventListener('click', function () {
+            closingPM.classList.add('selected');
+            closingAM.classList.remove('selected');
+        });
     </script>
-
 </body>
 
 </html>

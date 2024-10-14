@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/sidebar.css">
-    <link rel="stylesheet" href="css/systems-index.css">
+    <link rel="stylesheet" href="css/content.css">
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Systems</title>
@@ -164,42 +164,98 @@
         </div>
     </nav>
     <section class="main-section">
-    <div class="systems-sidebar">
-        <div>
-            <h1>Systems</h1>
+        <div class="systems-sidebar">
+            <div>
+                <h1>Systems</h1>
+            </div>
+            <div id="nav-systems-config" class="systems-option">
+                <p>System Configuration</p>
+            </div>
+            <div id="nav-content" class="systems-option active">
+                <p>Content</p>
+            </div>
+            <div id="nav-indexes" class="systems-option">
+                <p>Biblio Indexes</p>
+            </div>
+            <div id="nav-modules" class="systems-option">
+                <p>Modules</p>
+            </div>
+            <div id="nav-librarian" class="systems-option">
+                <p>Librarian & System Users</p>
+            </div>
+            <div id="nav-user-group" class="systems-option">
+                <p>User Group</p>
+            </div>
+            <div id="nav-holiday" class="systems-option">
+                <p>Holiday Setting</p>
+            </div>
+            <div id="nav-system-log" class="systems-option">
+                <p>System Log</p>
+            </div>
+            <div id="nav-database" class="systems-option">
+                <p>Database Backup</p>
+            </div>
         </div>
-        <div id="nav-systems-config" class="systems-option">
-            <p>System Configuration</p>
-        </div>
-        <div id="nav-content" class="systems-option">
-            <p>Content</p>
-        </div>
-        <div id="nav-indexes" class="systems-option">
-            <p>Biblio Indexes</p>
-        </div>
-        <div id="nav-modules" class="systems-option">
-            <p>Modules</p>
-        </div>
-        <div id="nav-librarian" class="systems-option">
-            <p>Librarian & System Users</p>
-        </div>
-        <div id="nav-user-group" class="systems-option">
-            <p>User Group</p>
-        </div>
-        <div id="nav-holiday" class="systems-option">
-            <p>Holiday Setting</p>
-        </div>
-        <div id="nav-system-log" class="systems-option">
-            <p>System Log</p>
-        </div>
-        <div id="nav-database" class="systems-option">
-            <p>Database Backup</p>
-        </div>
-    </div>
         <div style="background: #F7F7F8;" class="main-right">
             <div class="right-header">
                 <div>
                     <input type="date" id="date-input">
+                </div>
+                <div class="header-button">
+                    <button id="add-content-btn">+ Add New Content</button>
+                </div>
+            </div>
+            <div class="main-lower">
+                <div class="header-row">
+                    <div><input type="checkbox" name="" id=""></div>
+                    <div style="width: 153px;">Content Title </div>
+                    <div style="width: 90px;">Path(Must be unique)</div>
+                    <div style="width: 85px;">Last Updated</div>
+                    <div style="width: 80px;">Actions</div>
+                </div>
+                <div class="table-contents">
+                    <div>
+                        <div><input type="checkbox" name="" id=""></div>
+                        <div style="width: 153px;">
+                            <p>Help on Usage</p>
+                        </div>
+                        <div style="width: 90px;">
+                            <p>Help</p>
+                        </div>
+
+                        <div style="width: 85px;">
+                            <p>2022-17-09</p>
+                        </div>
+
+                        <div style="width: 80px;">
+                            <i class='bx bx-edit'></i>
+                            <i class='bx bx-trash-alt'></i>
+                            <i class='bx bx-printer'></i>
+                            <i class='bx bxs-chevron-right'></i>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div><input type="checkbox" name="" id=""></div>
+                        <div style="width: 153px;">
+                            <p>Welcome To Admin Page</p>
+                        </div>
+                        <div style="width: 90px;">
+                            <p>AdminHome</p>
+                        </div>
+
+                        <div style="width: 85px;">
+                            <p>2022-17-09</p>
+                        </div>
+
+                        <div style="width: 80px;">
+                            <i class='bx bx-edit'></i>
+                            <i class='bx bx-trash-alt'></i>
+                            <i class='bx bx-printer'></i>
+                            <i class='bx bxs-chevron-right'></i>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -237,8 +293,11 @@
         document.getElementById("nav-systems-config").addEventListener("click", function () {
             window.location.href = "./system-configuration.html";
         });
-         document.getElementById("nav-content").addEventListener("click", function () {
-                window.location.href = "./content.html";
+        document.getElementById("nav-content").addEventListener("click", function () {
+            window.location.href = "./content.html";
+        });
+         document.getElementById("add-content-btn").addEventListener("click", function () {
+                window.location.href = "./add-content.html";
             });
     </script>
     <script src="../script/report&analytics-graph-data.js"></script>

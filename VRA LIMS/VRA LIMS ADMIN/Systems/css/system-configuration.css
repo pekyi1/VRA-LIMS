@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.main-right {
+    margin-top: 25px;
+}
+
+.a {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 10px;
+}
+
+.a svg path {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+.b {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 10px 35px;
+}
+
+.b h1 {
+    color: #003459;
+    font-family: Lato;
+    font-size: 20px;
+    margin: 0;
+}
+
+.d {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    padding: 10px 35px;
+}
+
+.d>div:first-of-type,
+.d>div:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 450%;
+}
+
+.d>div>div:nth-of-type(2) {
+    height: 50px;
+}
+
+
+.d>div>p {
+    font-size: 13.5px;
+    color: #4B4B4B;
+    font-family: Poppins;
+    margin: 7px 0;
+}
+
+.d div input {
+    width: 80%;
+    height: 90%;
+    border: none;
+    border-radius: 10px;
+    padding: 0 20px;
+    color: #003459;
+    background-color: #EBEEEF;
+}
+
+.d div input:focus {
+    border: 1.5px solid #1B3764;
+    outline: none;
+}
+
+.d div input::placeholder {
+    color: #CACACA;
+    font-size: 12.5px;
+    font-family: Inter;
+}
+
+.d p,
+.g p {
+    font-size: 12px;
+    color: #4B4B4B;
+    font-family: Poppins;
+    margin: 7px 0;
+}
+
+.g {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    padding: 10px 35px;
+}
+
+.g>div:first-of-type,
+.g>div:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 450%;
+}
+
+.g>div>div:nth-of-type(2) {
+    height: 50px;
+}
+
+.g>div>p {
+    font-size: 13.5px;
+    color: #4B4B4B;
+    font-family: Poppins;
+    margin: 7px 0;
+}
+
+.g>div:nth-of-type(2) input {
+    width: 80%;
+    height: 100%;
+    border: 1px solid #CACACA;
+    border-radius: 10px;
+    padding: 0 40px;
+    color: #003459;
+}
+
+.g div input:focus {
+    border: 1.5px solid #1B3764;
+    outline: none;
+}
+
+.g div input::placeholder {
+    color: #CACACA;
+    font-size: 14px;
+    font-family: Inter;
+}
+
+.g>div:first-of-type>div:nth-of-type(2) {
+    position: relative;
+}
+
+.g>div:first-of-type>div:nth-of-type(2) .close {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.g>div:first-of-type>div:nth-of-type(2) i {
+    color: #AAAAAA;
+    cursor: pointer;
+}
+
+.custom-select-wrapper {
+    position: relative;
+    width: 90%;
+}
+
+select {
+    width: 100%;
+    height: 100%;
+    padding: 6px 10px;
+    font-size: 14px;
+    color: #CACACA;
+    border: none;
+    border-radius: 10px;
+    background-color: #EBEEEF;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.custom-select-wrapper::after {
+    content: '▼';
+    font-size: 12px;
+    color: #003049;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.custom-select-wrapper select option {
+    color: #333;
+}
+
+.custom-select-wrapper select option:first-child {
+    color: #A9A9A9;
+}
+
+.custom-select-wrapper select:focus {
+    border-color: #003459;
+    outline: none;
+}
+
+.custom-select-wrapper select option {
+    padding: 20px 10px;
+    background-color: #FFF;
+    color: #333;
+    height: 40px;
+}
+
+.custom-select-wrapper select option:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+.custom-select-wrapper select option:checked {
+    background-color: #003049;
+    color: white;
+}
+
+/* STYLING FOR THE TIME PART */
+.time-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.time-input {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
+}
+
+.time-input label {
+    font-size: 11.5px;
+    color: #003049;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    padding-left: 0;
+    border-radius: 5px;
+    border: none;
+}
+
+.input-group input {
+    width: 20px;
+    padding: 2px 3px;
+    border-radius: 3px;
+    text-align: center;
+    border: none;
+    font-size: 11px;
+    outline: none;
+    background-color: #EBEEEF;
+    color: #2C3E50;
+}
+
+/* Hide the arrows in number input */
+.input-group input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+.input-group select {
+    background-color: #f8f8f8;
+    border: none;
+    font-size: 16px;
+    color: #2C3E50;
+    cursor: pointer;
+    outline: none;
+    padding: 0 5px;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    outline: none;
+    border: 1px solid #1E88E5;
+}
+
+.input-group select option {
+    background-color: white;
+    color: #2C3E50;
+}
+
+/* Styles for AM/PM buttons */
+.ampm-button {
+    display: inline-block;
+    padding: 5px 3px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    font-size: 8px;
+    cursor: pointer;
+    color: #2C3E50;
+
+}
+
+.ampm-button.selected {
+    background-color: #003049;
+    color: white;
+}
+
+.ampm-container {
+    display: flex;
+    gap: 0;
+}
+
+.i {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    padding: 10px 35px;
+}
+
+.i button {
+    color: #fff;
+    width: 120px;
+    height: 40px;
+    border-radius: 6px;
+    border: none;
+    background: #003459;
+    cursor: pointer;
+    transition: .15s ease;
+    margin-right: 30px;
+}
+
+.i button:hover {
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
