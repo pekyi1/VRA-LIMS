@@ -4,22 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="css/systems-index.css">
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/add-record.css">
-    <title>Add Record</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Report & Analytics</title>
 </head>
 
 <body>
     <nav class="sidebar">
         <div class="side-upper">
-            <img src="image-components/xdtf83ivu5_vra_logo-removebg-preview 1.png" alt="">
+            <img src="../image-components/xdtf83ivu5_vra_logo-removebg-preview 1.png" alt="">
             <h1>LiMS</h1>
         </div>
         <div class="side-middle">
             <div id="dashboard">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                    <mask id="mask0_1647_4028" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
+                    <mask id="mask0_1647_4028" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0">
                         width="32" height="32">
                         <rect width="32" height="32" fill="white" />
                     </mask>
@@ -40,7 +41,7 @@
                         d="M4 16.0003H6.66667V28.0003H4V16.0003ZM25.3333 10.667H28V28.0003H25.3333V10.667ZM14.6667 2.66699H17.3333V28.0003H14.6667V2.66699Z"
                         fill="#969AA0" />
                 </svg>
-                <p id="accession-records">Accession Records (Hard copy)</p>
+                <p>Accession Records (Hard copy)</p>
             </div>
             <div id="accession-records-soft">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -50,13 +51,13 @@
                 </svg>
                 <p>Accession Records (Soft copy)</p>
             </div>
-            <div id="circulation" class="active">
+            <div id="circulation">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                     <path
                         d="M20.6666 25.6187L15.9226 20.8747L16.8666 19.9307L20.6666 23.7307L28.252 16.1467L29.1946 17.0894L20.6666 25.6187ZM26.6666 13.3334H25.3333V6.66669H21.3333V9.64003H10.6666V6.66669H6.66665V25.3334H14.6666V26.6667H5.33331V5.33336H13.6693C13.7938 4.81247 14.0706 4.37469 14.5 4.02003C14.9293 3.66447 15.4293 3.48669 16 3.48669C16.5813 3.48669 17.0853 3.66447 17.512 4.02003C17.9386 4.37381 18.2142 4.81158 18.3386 5.33336H26.6666V13.3334ZM16.004 6.97336C16.3106 6.97336 16.5662 6.87025 16.7706 6.66403C16.9751 6.45692 17.0773 6.20003 17.0773 5.89336C17.0773 5.58669 16.9738 5.33114 16.7666 5.12669C16.5595 4.92225 16.3026 4.82003 15.996 4.82003C15.6893 4.82003 15.4338 4.92403 15.2293 5.13203C15.0249 5.34003 14.9226 5.59692 14.9226 5.90269C14.9226 6.20847 15.0266 6.46358 15.2346 6.66803C15.4426 6.87247 15.6991 6.97336 16.004 6.97336Z"
                         fill="#969AA0" />
                 </svg>
-                <p class="active">Circulation</p>
+                <p>Circulation</p>
             </div>
             <div id="membership">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -91,7 +92,7 @@
                 </svg>
                 <p>Overdue Alert</p>
             </div>
-            <div id="report">
+            <div id="report" >
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                     <path
                         d="M26.6667 2.66663H5.33335C3.86669 2.66663 2.66669 3.86663 2.66669 5.33329V29.3333L8.00002 24H26.6667C28.1334 24 29.3334 22.8 29.3334 21.3333V5.33329C29.3334 3.86663 28.1334 2.66663 26.6667 2.66663ZM26.6667 21.3333H6.93335L5.33335 22.9333V5.33329H26.6667V21.3333ZM22.6667 14.6666H20V12H22.6667V14.6666ZM17.3334 14.6666H14.6667V12H17.3334V14.6666ZM12 14.6666H9.33335V12H12"
@@ -99,13 +100,13 @@
                 </svg>
                 <p>Report & Analysis</p>
             </div>
-            <div id="systems">
+            <div id="systems" class="active">
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
                     <path
                         d="M16 10.6667C17.4145 10.6667 18.7711 11.2287 19.7713 12.2288C20.7714 13.229 21.3334 14.5856 21.3334 16.0001C21.3334 17.4146 20.7714 18.7711 19.7713 19.7713C18.7711 20.7715 17.4145 21.3334 16 21.3334C14.5855 21.3334 13.229 20.7715 12.2288 19.7713C11.2286 18.7711 10.6667 17.4146 10.6667 16.0001C10.6667 14.5856 11.2286 13.229 12.2288 12.2288C13.229 11.2287 14.5855 10.6667 16 10.6667ZM16 13.3334C15.2928 13.3334 14.6145 13.6144 14.1144 14.1145C13.6143 14.6146 13.3334 15.2928 13.3334 16.0001C13.3334 16.7073 13.6143 17.3856 14.1144 17.8857C14.6145 18.3858 15.2928 18.6667 16 18.6667C16.7073 18.6667 17.3855 18.3858 17.8856 17.8857C18.3857 17.3856 18.6667 16.7073 18.6667 16.0001C18.6667 15.2928 18.3857 14.6146 17.8856 14.1145C17.3855 13.6144 16.7073 13.3334 16 13.3334ZM13.3334 29.3334C13 29.3334 12.72 29.0934 12.6667 28.7734L12.1734 25.2401C11.3334 24.9067 10.6134 24.4534 9.92002 23.9201L6.60002 25.2668C6.30669 25.3734 5.94669 25.2667 5.78669 24.9734L3.12002 20.3601C3.03841 20.2227 3.00964 20.0603 3.03909 19.9032C3.06854 19.7462 3.15419 19.6052 3.28002 19.5067L6.09335 17.2934L6.00002 16.0001L6.09335 14.6667L3.28002 12.4934C3.15419 12.3949 3.06854 12.254 3.03909 12.0969C3.00964 11.9399 3.03841 11.7775 3.12002 11.6401L5.78669 7.02675C5.94669 6.73341 6.30669 6.61342 6.60002 6.73342L9.92002 8.06675C10.6134 7.54675 11.3334 7.09342 12.1734 6.76008L12.6667 3.22675C12.72 2.90675 13 2.66675 13.3334 2.66675H18.6667C19 2.66675 19.28 2.90675 19.3334 3.22675L19.8267 6.76008C20.6667 7.09342 21.3867 7.54675 22.08 8.06675L25.4 6.73342C25.6934 6.61342 26.0534 6.73341 26.2134 7.02675L28.88 11.6401C29.0534 11.9334 28.9734 12.2934 28.72 12.4934L25.9067 14.6667L26 16.0001L25.9067 17.3334L28.72 19.5067C28.9734 19.7067 29.0534 20.0667 28.88 20.3601L26.2134 24.9734C26.0534 25.2667 25.6934 25.3867 25.4 25.2668L22.08 23.9334C21.3867 24.4534 20.6667 24.9067 19.8267 25.2401L19.3334 28.7734C19.28 29.0934 19 29.3334 18.6667 29.3334H13.3334ZM15 5.33341L14.5067 8.81342C12.9067 9.14675 11.4934 10.0001 10.4667 11.1867L7.25335 9.80008L6.25335 11.5334L9.06669 13.6001C8.53335 15.1556 8.53335 16.8445 9.06669 18.4001L6.24002 20.4801L7.24002 22.2134L10.48 20.8267C11.5067 22.0001 12.9067 22.8534 14.4934 23.1734L14.9867 26.6667H17.0134L17.5067 23.1867C19.0934 22.8534 20.4934 22.0001 21.52 20.8267L24.76 22.2134L25.76 20.4801L22.9334 18.4134C23.4667 16.8534 23.4667 15.1601 22.9334 13.6001L25.7467 11.5334L24.7467 9.80008L21.5333 11.1867C20.4856 9.97385 19.0645 9.14365 17.4934 8.82675L17 5.33341H15Z"
                         fill="#737791" />
                 </svg>
-                <p>Systems</p>
+                <p class="active">Systems</p>
             </div>
         </div>
         <div class="side-lower">
@@ -119,7 +120,7 @@
     </nav>
     <nav class="header">
         <div class="header-left">
-            <h1>Add New Record</h1>
+            <h1>Report & Analytics</h1>
         </div>
         <div class="header-middle">
             <div class="input-box">
@@ -140,7 +141,7 @@
                 <span class="notification-dot"></span>
             </div>
             <div>
-                <img src="image-components/test-image.jpg" alt="">
+                <img src="../image-components/test-image.jpg" alt="">
             </div>
             <div>
                 <p>Fred Pekyi</p>
@@ -162,201 +163,38 @@
             </div>
         </div>
     </nav>
-
-    <section class="main-content">
-        <section class="sub-section">
-            <div class="a" id="circulate-back-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                    <path
-                        d="M16.0433 0.891113C7.38412 0.891113 0.327942 6.66301 0.327942 13.7748C0.327942 20.8737 7.38412 26.6585 16.0433 26.6585C24.7181 26.6585 31.7586 20.8737 31.7586 13.7748C31.7586 6.78355 24.9547 1.08716 16.4829 0.896066L16.0433 0.891113Z"
-                        fill="white" />
-                    <path opacity="0.5"
-                        d="M25.978 28.3204C26.8805 29.1294 26.8805 30.4405 26.0081 31.2774C25.5569 31.6959 24.9853 31.8911 24.3836 31.8911C23.8121 31.8911 23.2405 31.6959 22.8193 31.2774L12.3205 21.5975C11.8994 21.207 11.6587 20.677 11.6587 20.119C11.6587 19.5611 11.8994 19.0311 12.3205 18.6406L22.8193 8.96067C23.6917 8.12379 25.1056 8.12379 26.0081 8.96067C26.8805 9.76965 26.8805 11.1087 25.978 11.9176L17.1036 20.119L25.978 28.3204Z"
-                        fill="#030229" />
-                </svg>
-            </div>
-            <div class="b">
-                <h1>Circulation IDs</h1>
-            </div>
-            <div class="d">
-                <div>
-                    <div>
-                        <p>Author</p>
-                    </div>
-                    <div><input type="text" placeholder="Jack W. Hayford"></div>
-                </div>
-                <div>
-                    <div>
-                        <p>Publisher</p>
-                    </div>
-                    <div><input type="text" placeholder="### ### ###"></div>
-                </div>
-            </div>
-            <div class="e">
-                <div>
-                    <div>
-                        <p>Publishing Year</p>
-                    </div>
-                    <div>
-                        <i class='bx bx-calendar calendar'></i>
-                        <select id="year"></select>
-                        <i class='bx bxs-x-circle close'></i>
-                    </div>
-                </div>
-                <div>
-
-                </div>
-            </div>
-            <div class="b">
-                <h1>Circulation Dates</h1>
-            </div>
-            <div class="d">
-                <div>
-                    <div>
-                        <p>Issued By</p>
-                    </div>
-                    <div><input type="text" placeholder="Jack W. Hayford"></div>
-                </div>
-                <div>
-                    <div>
-                        <p>Returned By</p>
-                    </div>
-                    <div><input type="text" placeholder="### ### ###"></div>
-                </div>
-            </div>
-            <div class="g">
-                <div>
-                    <div>
-                        <p>Status</p>
-                    </div>
-                    <div class="custom-select-wrapper">
-                        <select>
-                            <option selected disabled>Select status</option>
-                            <option value="1">Approve</option>
-                            <option value="2">Pending</option>
-                            <option value="3">Unavaliable</option>
-                        </select>
-                    </div>
-                </div>
-                <div>
-                </div>
-            </div>
-
-            
-            <div class="b">
-                <h1>Circulation Dates</h1>
-            </div>
-            <div class="e">
-                <div>
-                    <div>
-                        <p>Issue Date</p>
-                    </div>
-                    <div>
-                        <input type="date" id="date-input">
-                    </div>
-                </div>
-                <div>
-                    <div>
-                        <p>Due Date</p>
-                    </div>
-                    <div>
-                        <input type="date" id="date-input">
-                    </div>
-                </div>
-            </div>
-            <div class="e">
-                <div>
-                    <div>
-                        <p>Returned Date</p>
-                    </div>
-                    <div>
-                        <input type="date" id="date-input">
-                    </div>
-                </div>
-
-
-                <div>
-
-                </div>
-
-            </div>
-            <div class="i">
-                <button id="discard-btn">Discard</button>
-                <button>Save Details</button>
-            </div>
-        </section>
-    </section>
-    <div class="disclaimer-modal">
-        <div class="discard-disclaimer">
-            <div><i class='bx bx-x' id="discard-close"></i></div>
-            <div>
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-                        <path
-                            d="M15.1667 2.33325V19.2499H12.8334V2.33325H15.1667ZM12.8334 22.1666H15.1714V24.5046H12.8334V22.1666Z"
-                            fill="#FF3932" />
-                    </svg>
-                </div>
-                <div>
-                    <p>Sure you want to Discard it?</p>
-                    <p>Are you sure you want to discard this information</p>
-                </div>
-            </div>
-            <div>
-                <button>No, cancel</button>
-                <button>Yes, confirm</button>
-            </div>
-        </div>
-    </div>
-    <script src="script/header.js"></script>
-    <script src="script/disclaimer-script.js"></script>
+    <script src="../script/edit-modal.js"></script>
+    <script src="../script/header.js"></script>
     <script>
         document.getElementById("dashboard").addEventListener("click", function () {
-            window.location.href = "dashboard.html";
+            window.location.href = "../dashboard.html";
         });
         document.getElementById("accession-records-hard").addEventListener("click", function () {
-            window.location.href = "accession-records.html";
+            window.location.href = "../accession-records.html";
         });
-
         document.getElementById("accession-records-soft").addEventListener("click", function () {
-            window.location.href = "accession-records(ebooks).html";
+            window.location.href = "../accession-records(ebooks).html";
         });
         document.getElementById("circulation").addEventListener("click", function () {
-            window.location.href = "circulation.html";
+            window.location.href = "../circulation.html";
         });
         document.getElementById("membership").addEventListener("click", function () {
-            window.location.href = "membership.html";
+            window.location.href = "../membership.html";
         });
         document.getElementById("request-module").addEventListener("click", function () {
-            window.location.href = "requestlist.html";
+            window.location.href = "../requestlist.html";
         });
         document.getElementById("overdue-alert").addEventListener("click", function () {
-            window.location.href = "overduelist.html";
+            window.location.href = "../overduelist.html";
         });
-         document.getElementById("report").addEventListener("click", function () {
-                window.location.href = "./Report & Analitics/report-and-analytics(All).html";
-            });
+        document.getElementById("report").addEventListener("click", function () {
+            window.location.href = "report-and-analytics(All).html";
+        });
         document.getElementById("systems").addEventListener("click", function () {
-                window.location.href = "./Systems/systems-index.html";
-            });
-        document.getElementById("circulate-back-btn").addEventListener("click", function () {
-            window.location.href = "circulation.html";
+            window.location.href = "systems-index.html";
         });
     </script>
-    <script>
-        const select = document.getElementById('year');
-        const currentYear = new Date().getFullYear(); // Get current year
-        const startYear = 1900; // Set start year
-
-        // Generate year options dynamically
-        for (let year = currentYear; year >= startYear; year--) {
-            const option = document.createElement('option');
-            option.value = year;
-            option.text = year;
-            select.appendChild(option);
-        }
-    </script>
-
+    <script src="../script/report&analytics-graph-data.js"></script>
 </body>
 
 </html>
