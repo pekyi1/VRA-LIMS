@@ -12,19 +12,16 @@ function hideBothModals() {
   editModal.style.display = 'none';
   discardModal.style.display = 'none';
 }
-// Attach click event listener to each edit button in the table
 editModalButtons.forEach((button) => {
   button.addEventListener('click', () => {
     editModal.style.display = 'block';
   });
 });
 
-// Close modal on clicking the 'back' button
 editModalBack.addEventListener('click', () => {
   editModal.style.display = 'none';
 });
 
-// Close modal on clicking the 'discard' button
 discardEditModal.addEventListener('click', () => {
   discardModal.style.display = 'flex';
 });

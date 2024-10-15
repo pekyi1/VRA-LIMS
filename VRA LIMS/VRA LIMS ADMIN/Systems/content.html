@@ -27,7 +27,7 @@
                     </svg>
                 </div>
                 <div class="b">
-                    <h1>New Content Details</h1>
+                    <h1>Update Content Details</h1>
                 </div>
                 <form action="">
                     <div>
@@ -45,7 +45,7 @@
                 </form>
                 <div class="i">
                     <button id="discard-edit-btn">Discard</button>
-                    <button>Save Details</button>
+                    <button>Update Details</button>
                 </div>
             </div>
         </section>
@@ -243,59 +243,95 @@
                     <button id="add-content-btn">+ Add New Content</button>
                 </div>
             </div>
-            <div class="main-lower">
-                <div class="header-row">
-                    <div><input type="checkbox" name="" id=""></div>
-                    <div style="width: 153px;">Content Title </div>
-                    <div style="width: 90px;">Path(Must be unique)</div>
-                    <div style="width: 85px;">Last Updated</div>
-                    <div style="width: 80px;">Actions</div>
-                </div>
-                <div class="table-contents">
-                    <div>
-                        <div><input type="checkbox" name="" id=""></div>
-                        <div style="width: 153px;">
-                            <p>Help on Usage</p>
-                        </div>
-                        <div style="width: 90px;">
-                            <p>Help</p>
-                        </div>
-
-                        <div style="width: 85px;">
-                            <p>2022-17-09</p>
-                        </div>
-
-                        <div style="width: 80px;">
-                            <i class='bx bx-edit'></i>
-                            <i class='bx bx-trash-alt'></i>
-                            <i class='bx bx-printer'></i>
-                            <i class='bx bxs-chevron-right'></i>
-                        </div>
-                    </div>
-
-                    <div>
-                        <div><input type="checkbox" name="" id=""></div>
-                        <div style="width: 153px;">
-                            <p>Welcome To Admin Page</p>
-                        </div>
-                        <div style="width: 90px;">
-                            <p>AdminHome</p>
-                        </div>
-
-                        <div style="width: 85px;">
-                            <p>2022-17-09</p>
-                        </div>
-
-                        <div style="width: 80px;">
-                            <i class='bx bx-edit'></i>
-                            <i class='bx bx-trash-alt'></i>
-                            <i class='bx bx-printer'></i>
-                            <i class='bx bxs-chevron-right'></i>
-                        </div>
-                    </div>
-
-                </div>
+        <div class="main-lower">
+            <div class="header-row">
+                <div><input type="checkbox" name="" id=""></div>
+                <div style="width: 153px;">Content Title</div>
+                <div style="width: 90px;">Path (Must be unique)</div>
+                <div style="width: 85px;">Last Updated</div>
+                <div style="width: 80px;">Actions</div>
             </div>
+            <div class="table-contents">
+        
+                <div>
+                    <div><input type="checkbox" name="" id=""></div>
+                    <div style="width: 153px;">
+                        <p>Help On Usage</p>
+                    </div>
+                    <div style="width: 90px;">
+                        <p>Help</p>
+                    </div>
+                    <div style="width: 85px;">
+                        <p>2015-11-02</p>
+                    </div>
+                    <div style="width: 80px;">
+                        <i class='bx bx-edit'></i>
+                        <i class='bx bx-trash-alt'></i>
+                        <i class='bx bx-printer'></i>
+                        <i class='bx bxs-chevron-right'></i>
+                    </div>
+                </div>
+        
+                <div>
+                    <div><input type="checkbox" name="" id=""></div>
+                    <div style="width: 153px;">
+                        <p>Welcome To Admin Page</p>
+                    </div>
+                    <div style="width: 90px;">
+                        <p>AdminHome</p>
+                    </div>
+                    <div style="width: 85px;">
+                        <p>2015-11-02</p>
+                    </div>
+                    <div style="width: 80px;">
+                        <i class='bx bx-edit'></i>
+                        <i class='bx bx-trash-alt'></i>
+                        <i class='bx bx-printer'></i>
+                        <i class='bx bxs-chevron-right'></i>
+                    </div>
+                </div>
+        
+                <div>
+                    <div><input type="checkbox" name="" id=""></div>
+                    <div style="width: 153px;">
+                        <p>The VRA Library</p>
+                    </div>
+                    <div style="width: 90px;">
+                        <p>LibrInfo</p>
+                    </div>
+                    <div style="width: 85px;">
+                        <p>2015-11-02</p>
+                    </div>
+                    <div style="width: 80px;">
+                        <i class='bx bx-edit'></i>
+                        <i class='bx bx-trash-alt'></i>
+                        <i class='bx bx-printer'></i>
+                        <i class='bx bxs-chevron-right'></i>
+                    </div>
+                </div>
+        
+                <div>
+                    <div><input type="checkbox" name="" id=""></div>
+                    <div style="width: 153px;">
+                        <p>Homepage Info</p>
+                    </div>
+                    <div style="width: 90px;">
+                        <p>HeaderINFO</p>
+                    </div>
+                    <div style="width: 85px;">
+                        <p>2015-11-02</p>
+                    </div>
+                    <div style="width: 80px;">
+                        <i class='bx bx-edit'></i>
+                        <i class='bx bx-trash-alt'></i>
+                        <i class='bx bx-printer'></i>
+                        <i class='bx bxs-chevron-right'></i>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
         </div>
     </section>
     <div class="disclaimer-modal">
@@ -359,6 +395,9 @@
         document.getElementById("add-content-btn").addEventListener("click", function () {
             window.location.href = "./add-content.html";
         });
+         document.getElementById("nav-modules").addEventListener("click", function () {
+                window.location.href = "./modules.html";
+            });
     </script>
     <script src="../script/report&analytics-graph-data.js"></script>
 </body>

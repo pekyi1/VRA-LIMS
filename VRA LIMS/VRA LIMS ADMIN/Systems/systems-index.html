@@ -164,38 +164,38 @@
         </div>
     </nav>
     <section class="main-section">
-    <div class="systems-sidebar">
-        <div>
-            <h1>Systems</h1>
+        <div class="systems-sidebar">
+            <div>
+                <h1>Systems</h1>
+            </div>
+            <div id="nav-systems-config" class="systems-option">
+                <p>System Configuration</p>
+            </div>
+            <div id="nav-content" class="systems-option">
+                <p>Content</p>
+            </div>
+            <div id="nav-indexes" class="systems-option">
+                <p>Biblio Indexes</p>
+            </div>
+            <div id="nav-modules" class="systems-option">
+                <p>Modules</p>
+            </div>
+            <div id="nav-librarian" class="systems-option">
+                <p>Librarian & System Users</p>
+            </div>
+            <div id="nav-user-group" class="systems-option">
+                <p>User Group</p>
+            </div>
+            <div id="nav-holiday" class="systems-option">
+                <p>Holiday Setting</p>
+            </div>
+            <div id="nav-system-log" class="systems-option">
+                <p>System Log</p>
+            </div>
+            <div id="nav-database" class="systems-option">
+                <p>Database Backup</p>
+            </div>
         </div>
-        <div id="nav-systems-config" class="systems-option">
-            <p>System Configuration</p>
-        </div>
-        <div id="nav-content" class="systems-option">
-            <p>Content</p>
-        </div>
-        <div id="nav-indexes" class="systems-option">
-            <p>Biblio Indexes</p>
-        </div>
-        <div id="nav-modules" class="systems-option">
-            <p>Modules</p>
-        </div>
-        <div id="nav-librarian" class="systems-option">
-            <p>Librarian & System Users</p>
-        </div>
-        <div id="nav-user-group" class="systems-option">
-            <p>User Group</p>
-        </div>
-        <div id="nav-holiday" class="systems-option">
-            <p>Holiday Setting</p>
-        </div>
-        <div id="nav-system-log" class="systems-option">
-            <p>System Log</p>
-        </div>
-        <div id="nav-database" class="systems-option">
-            <p>Database Backup</p>
-        </div>
-    </div>
         <div style="background: #F7F7F8;" class="main-right">
             <div class="right-header">
                 <div>
@@ -237,9 +237,12 @@
         document.getElementById("nav-systems-config").addEventListener("click", function () {
             window.location.href = "./system-configuration.html";
         });
-         document.getElementById("nav-content").addEventListener("click", function () {
-                window.location.href = "./content.html";
-            });
+        document.getElementById("nav-content").addEventListener("click", function () {
+            window.location.href = "./content.html";
+        });
+        document.getElementById("nav-modules").addEventListener("click", function () {
+            window.location.href = "./modules.html";
+        });
     </script>
     <script src="../script/report&analytics-graph-data.js"></script>
 </body>
