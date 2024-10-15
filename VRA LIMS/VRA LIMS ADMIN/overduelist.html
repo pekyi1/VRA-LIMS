@@ -7,10 +7,230 @@
     <link rel="stylesheet" href="css/sidebar.css">
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/overduelist.css">
+    <link rel="stylesheet" href="css/edit-modal-overduelist.css">
+
     <title>Overdue</title>
 </head>
 
 <body>
+
+    <div class="edit-modal">
+        <section class="edit-content">
+            <section class="sub-section">
+                <div class="a" id="back-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path
+                            d="M16.0433 0.891113C7.38412 0.891113 0.327942 6.66301 0.327942 13.7748C0.327942 20.8737 7.38412 26.6585 16.0433 26.6585C24.7181 26.6585 31.7586 20.8737 31.7586 13.7748C31.7586 6.78355 24.9547 1.08716 16.4829 0.896066L16.0433 0.891113Z"
+                            fill="white" />
+                        <path opacity="0.5"
+                            d="M25.978 28.3204C26.8805 29.1294 26.8805 30.4405 26.0081 31.2774C25.5569 31.6959 24.9853 31.8911 24.3836 31.8911C23.8121 31.8911 23.2405 31.6959 22.8193 31.2774L12.3205 21.5975C11.8994 21.207 11.6587 20.677 11.6587 20.119C11.6587 19.5611 11.8994 19.0311 12.3205 18.6406L22.8193 8.96067C23.6917 8.12379 25.1056 8.12379 26.0081 8.96067C26.8805 9.76965 26.8805 11.1087 25.978 11.9176L17.1036 20.119L25.978 28.3204Z"
+                            fill="#030229" />
+                    </svg>
+                </div>
+                <div class="b">
+                    <h1>Overdue IDs</h1>
+                </div>
+                <div class="d">
+                    <div>
+                        <div>
+                            <p>Overdue ID</p>
+                        </div>
+                        <div><input type="number" placeholder="546"></div> 
+                    </div>
+                    <div>
+                        <div>
+                            <p>Employee ID</p>
+                        </div>
+                        <div><input type="number" placeholder="45687"></div>
+                    </div>
+                </div>
+                <div class="e">
+                    <div>
+                        <div>
+                            <p>Book ID </p>
+                        </div>
+                        <div><input type="number" placeholder="455253"></div>
+                    </div>
+    
+                    <div>
+                        <div>
+                            <p>Book Title</p>
+                        </div>
+                        <div><input type="number" placeholder="455253"></div>
+                    </div>
+    
+                    
+    
+                </div>
+    
+                <div class="e">
+                    <div>
+                        <div>
+                            <p>Book Category</p>
+                        </div>
+                        <div class="custom-select-wrapper">
+                            <select>
+                            <option selected disabled>Select status</option>
+                            <option value="1">Requested</option>
+                            <option value="2">Issued</option>
+                            <option value="3">Overdue</option>
+                            </select>
+                        </div>
+                    </div>
+    
+                    <div>
+                        <div>
+                           
+                        </div>
+                        
+                    </div>
+    
+                </div>
+    
+    
+                <div class="b">
+                    <h1>Status</h1>
+                </div>
+                
+                <div class="g">
+                    <div>
+                        <div>
+                            <p>Department</p>
+                        </div>
+                        <div class="custom-select-wrapper2">
+                            <select>
+                            <option selected disabled>Select status</option>
+                            <option value="1">M.I.S</option>
+                            <option value="2">Legal</option>
+                            <option value="3">Copoarte communication</option>
+                            <option value="3">HR</option>
+                            <option value="3">Real Estate and Security</option>
+    
+                            </select>
+                        </div>
+                    </div>
+                    
+                        <div>
+                            <div>
+                                <p>Status</p>
+                            </div>
+                            <div class="custom-select-wrapper">
+                                <select>
+                                <option selected disabled>Select status</option>
+                                <option value="1">Requested</option>
+                                <option value="2">Issued</option>
+                                <option value="3">Overdue</option>
+                                </select>
+                            </div>
+                        </div>
+    
+                        
+                    </div>
+    
+    
+                    <div class="e">
+    
+                        <div>
+                            <div>
+                                <p>Processed by</p>
+                            </div>
+                            <div>
+                                <input type="text" placeholder="Amos Abugiri">
+                               
+                            </div>
+                        </div>
+    
+    
+                        <div>
+                            <div>
+                                <p>Book Title</p>
+                            </div>
+                            <div><input type="number" placeholder="455253"></div>
+                        </div>
+    
+                    </div>
+                    
+             
+                <div class="g">
+                    
+                    
+                </div>
+                
+                
+                <div class="b">
+                    <h1>Overdate Dates</h1>
+                </div>
+                <div class="e">
+                    <div>
+                        <div>
+                            <p>Issue Date</p>
+                        </div>
+                        <div>
+                            <input type="date" id="date-input">
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <p>Due Date</p>
+                        </div>
+                        <div>
+                            <input type="date" id="date-input">
+                        </div>
+                    </div>
+                </div>
+                <div class="h">
+                    <div>
+                        <div>
+                            <p>Return Date</p>
+                        </div>
+                        <div>
+                            <input type="date" id="date-input">
+                        </div>
+                    </div>
+    
+    
+                    <div>
+                        <div>
+                            <p>Email Reminder</p>
+                        </div>
+                        <div class="radio-selects">
+                            <form>
+                                <label>
+                                    <input type="radio" name="option" value="1" checked>
+                                    Yes
+                                </label><br>
+    
+                                <label>
+                                    <input type="radio" name="option" value="2">
+                                    No
+                                </label><br>
+                            </form>
+                        </div>
+                    </div>
+                    
+                </div>
+    
+    
+    
+                <div class="e">
+                    <div class="e">
+                        <h1>
+                            <p></p>
+                        </h1>
+                    </div>
+                </div>
+    
+    
+                   
+               
+                <div class="i">
+                    <button id="discard-edit-btn">Discard</button>
+                    <button>Save Details</button>
+                </div>
+            </section>
+        </section>
+    </div>
+
     <nav class="sidebar">
         <div class="side-upper">
             <img src="image-components/xdtf83ivu5_vra_logo-removebg-preview 1.png" alt="">
@@ -390,6 +610,28 @@
 
             
     </section>
+    <div class="disclaimer-modal">
+        <div class="discard-disclaimer">
+            <div><i class='bx bx-x' id="discard-close"></i></div>
+            <div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                        <path
+                            d="M15.1667 2.33325V19.2499H12.8334V2.33325H15.1667ZM12.8334 22.1666H15.1714V24.5046H12.8334V22.1666Z"
+                            fill="#FF3932" />
+                    </svg>
+                </div>
+                <div>
+                    <p>Sure you want to Discard it?</p>
+                    <p>Are you sure you want to discard this information</p>
+                </div>
+            </div>
+            <div>
+                <button id="cancel-disclaimer">No, cancel</button>
+                <button class="confirm">Yes, confirm</button>
+            </div>
+        </div>
+    </div>
 
     <script src="script/header.js"></script>
     <script>
@@ -406,6 +648,7 @@
         });
     </script>
     <script src="script/graph-information.js"></script>
+    <!-- <script src="script/disclaimer-script.js"></script> -->
     <script>
         const prevButton = document.getElementById('prev');
         const nextButton = document.getElementById('next');
@@ -543,6 +786,8 @@
                 window.location.href = "add-overdue.html";
             });
     </script>
+
+     <script src="script/edit-modal.js"></script>
 </body>
 
 </html>
