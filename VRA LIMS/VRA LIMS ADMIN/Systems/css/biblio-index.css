@@ -1,0 +1,192 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FFF;
+}
+
+/* MAIN SECTION STYLES */
+.main-section {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    right: 0;
+    margin-top: 60px;
+    /* border: 1px solid black; */
+    height: 100%;
+    background: #F7F7F8;
+    gap: 30px;
+}
+
+.systems-sidebar{
+    width: 230px;
+    height: 100%;
+    margin-top: 25px;
+    margin-left: 25px;
+    padding: 20px;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.systems-sidebar>div:first-of-type h1{
+    color: #003459;
+}
+
+.systems-option{
+    color: #667479;
+    border-radius: 12px;
+    width: 80%;
+    padding: 14px 10px;
+    margin-bottom: 12px;
+    transition: 0.15s ease;
+    cursor: pointer;
+}
+.systems-option:hover{
+    background: #003459;
+    opacity: 0.7;
+}
+.systems-option.active{
+    background: #00528C;
+    color: #FFF;
+}
+.systems-option p{
+    font-size: 13px;
+    margin: 0;
+}
+
+.main-right{
+    /* border: 1px solid blue; */
+    width: 75%;
+    height: 100%;
+    
+}
+.right-header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    
+}
+.right-header input[type="date"] {
+    border: none;
+    
+    /* Light background */
+    padding: 17px 40px;
+    border-radius: 5px;
+    background: transparent;
+    font-size: 14px;
+    color: #6c757d; 
+    cursor: pointer;
+    font-family: inherit;
+    /* Use the same font as the rest of the page */
+}
+
+/* Hide the default calendar icon in WebKit browsers */
+.right-header input[type="date"]::-webkit-calendar-picker-indicator {
+    background: url('https://img.icons8.com/material-outlined/24/000000/calendar--v1.png') no-repeat;
+    background-size: 16px 16px;
+    color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    position: relative;
+    
+}
+
+/* Remove the default appearance on different browsers */
+.right-header input[type="date"]::-webkit-inner-spin-button,
+.right-header input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+.right-header input[type="date"] {
+    appearance: none;
+    /* Removes default styling */
+    -webkit-appearance: none;
+    /* Safari */
+    -moz-appearance: textfield;
+    /* Firefox */
+}
+
+/* Add padding to the left to make space for the calendar icon */
+.right-header input[type="date"] {
+    padding-left: 30px;
+    position: relative;
+}
+
+/* For Firefox, we need to remove the default icon */
+.right-header input[type="date"]::-moz-focus-inner {
+    border: 0;
+}
+
+/* Style for the blue box section */
+.biblio-box-full-width {
+    background-color: rgba(161, 208, 245, 0.5); /* Light blue with 50% transparency */
+    min-height: 200px; /* Ensure enough height */
+    border-radius: 6px;
+    padding: 15px;
+    margin-top: 40px;
+    width: 95%; /* Full width of the content area */
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    /* border: 1px solid #0078cd; */
+}
+
+.biblio-header {
+    flex-grow: 1; /* Make sure header and details take most space */
+    position: relative;
+    margin-top: 50px;
+}
+
+.biblio-header h2 {
+    
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 10px 0; /* Space below header */
+    color: var(--Primary-Color-Dark-Blue, #003459);
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.biblio-details {
+    margin-top: 10px;
+    color: #333;
+    font-size: 15px;
+}
+
+.biblio-details p {
+    margin: 0; /* Reset default margin */
+    margin-top: 25px; /* Add space between paragraphs */
+    color: var(--Primary-Color-Dark-Blue, #003459);
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+/* Icons stay at the top right corner */
+.biblio-icons {
+    position: absolute;
+    top: 20px; /* Align to the top */
+    right: 20px; /* Align to the right */
+    display: flex;
+    gap: 10px; /* Space between icons */
+    font-size: 18px;
+    color: #e70d0d;
+}
+
+.biblio-icons .bx-printer {
+    color: #747474; /* Blue color for the printer icon */
+}
+
+.biblio-icons i:hover {
+    cursor: pointer;
+    color: #000; /* Color changes on hover */
+}
