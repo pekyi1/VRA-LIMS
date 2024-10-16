@@ -5,13 +5,171 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/sidebar.css">
-    <link rel="stylesheet" href="css/biblio-index.css">
+    <link rel="stylesheet" href="css/holiday-setting.css">
+    <link rel="stylesheet" href="css/edit-modal.css">
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Systems</title>
 </head>
 
 <body>
+    <div class="edit-modal">
+        <section class="edit-content">
+            <div class="main-right">
+                <div class="a" id="back-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path
+                            d="M16.0433 0.891113C7.38412 0.891113 0.327942 6.66601 0.327942 13.7748C0.327942 20.8737 7.38412 26.6585 16.0433 26.6585C24.7181 26.6585 31.7586 20.8737 31.7586 13.7748C31.7586 6.78355 24.9547 1.08716 16.4829 0.896066L16.0433 0.891113Z"
+                            fill="white" />
+                        <path opacity="0.5"
+                            d="M25.978 28.3204C26.8805 29.1294 26.8805 60.4405 26.0081 31.2774C25.5569 31.6959 24.9853 31.8911 24.3836 31.8911C23.8121 31.8911 23.2405 31.6959 22.8193 31.2774L12.3205 21.5975C11.8994 21.207 11.6587 20.677 11.6587 20.119C11.6587 19.5611 11.8994 19.0311 12.3205 18.6406L22.8193 8.96067C23.6917 8.12379 25.1056 8.12379 26.0081 8.96067C26.8805 9.76965 26.8805 11.1087 25.978 11.9176L17.1036 20.119L25.978 28.3204Z"
+                            fill="#060229" />
+                    </svg>
+                </div>
+                <div class="b">
+                    <h1>Set New Group</h1>
+                </div>
+                <div class="d">
+                    <div>
+                        <div>
+                            <p>Group Name</p>
+                        </div>
+                        <div><input type="text" placeholder="Jack W. Hayford"></div>
+                    </div>
+                    <div>
+                    </div>
+                </div>
+                <div class="main-lower">
+                    <div class="header-row">
+                        <div style="width: 15%;">Privileges</div>
+                        <div style="width: 60%;">Module Name</div>
+                        <div style="width: 5%;">Read</div>
+                        <div style="width: 5%;">Write</div>
+                    </div>
+                    <div class="table-contents">
+
+                        <!-- Row 1: Dashboard -->
+                        <div>
+                            <div style="width: 15%;"></div>
+                            <div style="width: 60%;">
+                                <p>Dashboard</p>
+                            </div>
+                            <div style="width: 5%;">
+                                <input type="checkbox" name="dashboard_read" id="dashboard_read">
+                            </div>
+                            <div style="width: 5%;">
+                                <input type="checkbox" name="dashboard_write" id="dashboard_write">
+                            </div>
+                        </div>
+
+                        <!-- Row 2: Accession Records (Soft Copy) -->
+                        <div>
+                            <div style="width: 15%;"></div>
+                            <div style="width: 60%;">
+                                <p>Accession Records (Soft Copy)</p>
+                            </div>
+                            <div style="width: 5%;">
+                                <input type="checkbox" name="accession_read" id="accession_read">
+                            </div>
+                            <div style="width: 5%;">
+                                <input type="checkbox" name="accession_write" id="accession_write">
+                            </div>
+                        </div>
+
+                        <!-- Row 3: Circulation -->
+                        <div>
+                            <div style="width: 15%;"></div>
+                            <div style="width: 60%;">
+                                <p>Circulation</p>
+                            </div>
+                            <div style="width: 5%;">
+                                <input type="checkbox" name="circulation_read" id="circulation_read">
+                            </div>
+                            <div style="width: 5%;">
+                                <input type="checkbox" name="circulation_write" id="circulation_write">
+                            </div>
+                        </div>
+
+                        <!-- Row 4: Membership -->
+                        <div>
+                            <div style="width: 15%;"></div>
+                            <div style="width: 60%;">
+                                <p>Membership</p>
+                            </div>
+                            <div style="width: 5%;">
+                                <input type="checkbox" name="membership_read" id="membership_read">
+                            </div>
+                            <div style="width: 5%;">
+                                <input type="checkbox" name="membership_write" id="membership_write">
+                            </div>
+                        </div>
+
+                        <!-- Row 5: Request Module -->
+                        <div>
+                            <div style="width: 15%;"></div>
+                            <div style="width: 60%;">
+                                <p>Request Module</p>
+                            </div>
+                            <div style="width: 5%;">
+                                <input type="checkbox" name="request_read" id="request_read">
+                            </div>
+                            <div style="width: 5%;">
+                                <input type="checkbox" name="request_write" id="request_write">
+                            </div>
+                        </div>
+
+                        <!-- Row 6: Overdue Alert -->
+                        <div>
+                            <div style="width: 15%;"></div>
+                            <div style="width: 60%;">
+                                <p>Overdue Alert</p>
+                            </div>
+                            <div style="width: 5%;">
+                                <input type="checkbox" name="overdue_read" id="overdue_read">
+                            </div>
+                            <div style="width: 5%;">
+                                <input type="checkbox" name="overdue_write" id="overdue_write">
+                            </div>
+                        </div>
+
+                        <!-- Row 7: Report & Analytics -->
+                        <div>
+                            <div style="width: 15%;"></div>
+                            <div style="width: 60%;">
+                                <p>Report & Analytics</p>
+                            </div>
+                            <div style="width: 5%;">
+                                <input type="checkbox" name="report_read" id="report_read">
+                            </div>
+                            <div style="width: 5%;">
+                                <input type="checkbox" name="report_write" id="report_write">
+                            </div>
+                        </div>
+
+                        <!-- Row 8: System -->
+                        <div>
+                            <div style="width: 15%;"></div>
+                            <div style="width: 60%;">
+                                <p>System</p>
+                            </div>
+                            <div style="width: 5%;">
+                                <input type="checkbox" name="system_read" id="system_read">
+                            </div>
+                            <div style="width: 5%;">
+                                <input type="checkbox" name="system_write" id="system_write">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="i">
+                    <button id="discard-edit-btn">Discard</button>
+                    <button>Save Details</button>
+                </div>
+            </div>
+        </section>
+    </div>
     <nav class="sidebar">
         <div class="side-upper">
             <img src="../image-components/xdtf83ivu5_vra_logo-removebg-preview 1.png" alt="">
@@ -120,7 +278,7 @@
     </nav>
     <nav class="header">
         <div class="header-left">
-            <h1 style="color: #CCD1D2;">System<span style="color: #1B3764;"> >>Biblio Index</span></h1>
+            <h1 style="color: #CCD1D2;">System<span style="color: #1B3764;"> >>Holiday Setting</span></h1>
         </div>
         <div class="header-middle">
             <div class="input-box">
@@ -171,10 +329,10 @@
             <div id="nav-systems-config" class="systems-option">
                 <p>System Configuration</p>
             </div>
-            <div id="nav-content" class="systems-option">
+            <div id="nav-content" class="systems-option ">
                 <p>Content</p>
             </div>
-            <div id="nav-indexes" class="systems-option active">
+            <div id="nav-indexes" class="systems-option">
                 <p>Biblio Indexes</p>
             </div>
             <div id="nav-modules" class="systems-option">
@@ -183,10 +341,10 @@
             <div id="nav-librarian" class="systems-option">
                 <p>Librarian & System Users</p>
             </div>
-            <div id="nav-user-group" class="systems-option">
+            <div id="nav-user-group" class="systems-option ">
                 <p>User Group</p>
             </div>
-            <div id="nav-holiday" class="systems-option">
+            <div id="nav-holiday" class="systems-option active">
                 <p>Holiday Setting</p>
             </div>
             <div id="nav-system-log" class="systems-option">
@@ -196,33 +354,78 @@
                 <p>Database Backup</p>
             </div>
         </div>
-        <div  class="main-right">
+        <div style="background: #F7F7F8;" class="main-right">
             <div class="right-header">
                 <div>
                     <input type="date" id="date-input">
                 </div>
+                <div class="header-button">
+                    <button id="add-user-group-btn">+ Add Special Holiday</button>
+                </div>
             </div>
-
-            <div class="biblio-box-full-width">
-                <div class="biblio-header">
-                    <h2>Bibliographic Index will speed Up Catalog Search</h2>
-                    <div class="biblio-details">
-                        <p><strong>Notice:</strong></p>
-                        <p>Total Data on biblio: 8769 Records</p>
+            <div class="main-lower">
+                <div class="working-days">
+                    <div class="b">
+                        <h1>Working Days</h1>
+                    </div>
+                    <div class="days">
+                        <div>
+                            <input type="checkbox" name="monday" id="monday">
+                            <p>Monday</p>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="tuesday" id="tuesday">
+                            <p>Tuesday</p>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="wednesday" id="wednesday">
+                            <p>Wednesday</p>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="thursday" id="thursday">
+                            <p>Thursday</p>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="friday" id="friday">
+                            <p>Friday</p>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="saturday" id="saturday">
+                            <p>Saturday</p>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="sunday" id="sunday">
+                            <p>Sunday</p>
+                        </div>
                     </div>
                 </div>
-                <div class="biblio-icons">
-                    <i class='bx bx-trash'></i>
-                    <i class='bx bx-printer'></i>
+            </div>
+
+        </div>
+    </section>
+    <div class="disclaimer-modal">
+        <div class="discard-disclaimer">
+            <div><i class='bx bx-x' id="discard-close"></i></div>
+            <div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                        <path
+                            d="M15.1667 2.33325V19.2499H12.8334V2.33325H15.1667ZM12.8334 22.1666H15.1714V24.5046H12.8334V22.1666Z"
+                            fill="#FF3932" />
+                    </svg>
+                </div>
+                <div>
+                    <p>Sure you want to Discard it?</p>
+                    <p>Are you sure you want to discard this information</p>
                 </div>
             </div>
-            
-            <!-- End of blue box section -->
+            <div>
+                <button id="cancel-disclaimer">No, cancel</button>
+                <button class="confirm">Yes, confirm</button>
+            </div>
         </div>
-
-        
-    </section>
-    <script src="../script/edit-modal.js"></script>
+    </div>
+    <script src="scripts/edit-modal.js"></script>
     <script src="../script/header.js"></script>
     <script>
         document.getElementById("dashboard").addEventListener("click", function () {
@@ -261,18 +464,21 @@
         document.getElementById("nav-modules").addEventListener("click", function () {
             window.location.href = "./modules.html";
         });
-          document.getElementById("nav-librarian").addEventListener("click", function () {
-                window.location.href = "./librarian&users.html";
-            });
+        document.getElementById("nav-holiday").addEventListener("click", function () {
+            window.location.href = "./holiday-setting.html";
+        });
+        document.getElementById("nav-librarian").addEventListener("click", function () {
+            window.location.href = "./librarian&users.html";
+        });
+        document.getElementById("add-user-group-btn").addEventListener("click", function () {
+            window.location.href = "./add-user-group.html";
+        });
         document.getElementById("nav-indexes").addEventListener("click", function () {
             window.location.href = "./biblio-index.html";
         });
-         document.getElementById("nav-user-group").addEventListener("click", function () {
-                window.location.href = "./user-group.html";
-            });
-            document.getElementById("nav-holiday").addEventListener("click", function () {
-                    window.location.href = "./holiday-setting.html";
-                });
+        document.getElementById("nav-user-group").addEventListener("click", function () {
+            window.location.href = "./user-group.html";
+        });
 
     </script>
     <script src="../script/report&analytics-graph-data.js"></script>

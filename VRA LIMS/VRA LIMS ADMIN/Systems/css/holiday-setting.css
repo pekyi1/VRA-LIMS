@@ -1,0 +1,202 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FFF;
+}
+
+.edit-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 4000;
+    overflow-y: scroll;
+}
+
+
+
+/* MAIN SECTION STYLES */
+.edit-content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    right: 0;
+    margin-top: 60px;
+    /* border: 1px solid black; */
+}
+
+/* MAIN SECTION STYLES */
+.main-section {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    right: 0;
+    margin-top: 60px;
+    /* border: 1px solid black; */
+    height: 100%;
+    background: #F7F7F8;
+    gap: 30px;
+}
+
+.systems-sidebar {
+    width: 230px;
+    height: 100%;
+    margin-top: 25px;
+    margin-left: 25px;
+    padding: 20px;
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.systems-sidebar>div:first-of-type h1 {
+    color: #003459;
+}
+
+.systems-option {
+    color: #667479;
+    border-radius: 12px;
+    width: 80%;
+    padding: 14px 10px;
+    margin-bottom: 12px;
+    transition: 0.15s ease;
+    cursor: pointer;
+}
+
+.systems-option:hover {
+    background: #003459;
+    opacity: 0.7;
+}
+
+.systems-option.active {
+    background: #00528C;
+    color: #FFF;
+}
+
+.systems-option p {
+    font-size: 13px;
+    margin: 0;
+}
+
+.main-right {
+    /* border: 1px solid blue; */
+    width: 75%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.right-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.right-header input[type="date"] {
+    border: none;
+    background-color: #f8f9fc;
+    /* Light background */
+    padding: 17px 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    font-size: 14px;
+    color: #6c757d;
+    cursor: pointer;
+    font-family: inherit;
+    /* Use the same font as the rest of the page */
+}
+
+/* Hide the default calendar icon in WebKit browsers */
+.right-header input[type="date"]::-webkit-calendar-picker-indicator {
+    background: url('https://img.icons8.com/material-outlined/24/000000/calendar--v1.png') no-repeat;
+    background-size: 16px 16px;
+    color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    position: relative;
+}
+
+/* Remove the default appearance on different browsers */
+.right-header input[type="date"]::-webkit-inner-spin-button,
+.right-header input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+.right-header input[type="date"] {
+    appearance: none;
+    /* Removes default styling */
+    -webkit-appearance: none;
+    /* Safari */
+    -moz-appearance: textfield;
+    /* Firefox */
+}
+
+/* Add padding to the left to make space for the calendar icon */
+.right-header input[type="date"] {
+    padding-left: 30px;
+    position: relative;
+}
+
+/* For Firefox, we need to remove the default icon */
+.right-header input[type="date"]::-moz-focus-inner {
+    border: 0;
+}
+
+.header-button button {
+    padding: 17px 40px;
+    cursor: pointer;
+    border: none;
+    background-color: rgba(0, 149, 255, 0.10);
+}
+.main-lower{
+    margin-top: 30px;
+}
+.working-days{
+    width: 80%;
+    height: 180px;
+}
+.b {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 10px 35px;
+}
+
+.b h1 {
+    color: #003459;
+    font-family: Lato;
+    font-size: 20px;
+    margin: 0;
+}
+.days{
+    display: grid;
+    width: 100%;
+        border-radius: 10px;
+            background-color: #FFF;
+                padding: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.days>div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+}
+.days>div p{
+    margin-left: 10px;
+    font-size: 14px;
+    color: #030229;
+}

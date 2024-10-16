@@ -27,39 +27,56 @@
                     </svg>
                 </div>
                 <div class="b">
-                    <h1>New Modules Details</h1>
+                    <h1>New User Details</h1>
                 </div>
-                <form action="">
-                    <div>
-                        <label for="">Module Name</label>
-                        <input type="text">
-                    </div>
-                    <div>
-                        <label for="">Module Description</label>
-                        <textarea name="" id=""></textarea>
-                    </div>
-                </form>
-                <div class="h">
+                <div class="d">
                     <div>
                         <div>
-                            <p>Enable Module</p>
+                            <p>First Name</p>
                         </div>
-                        <div class="radio-selects">
-                            <form>
-                                <label>
-                                    <input type="radio" name="option" value="1" checked>
-                                    Yes
-                                </label><br>
-
-                                <label>
-                                    <input type="radio" name="option" value="2">
-                                    No
-                                </label><br>
-                            </form>
+                        <div><input type="text" placeholder="Jack W. Hayford"></div>
+                    </div>
+                    <div>
+                        <div>
+                            <p>Last Name</p>
+                        </div>
+                        <div><input type="text" placeholder="### ### ###"></div>
+                    </div>
+                </div>
+                <div class="d">
+                    <div>
+                        <div>
+                            <p>Username</p>
+                        </div>
+                        <div><input type="text" placeholder="Jack W. Hayford"></div>
+                    </div>
+                    <div>
+                        <div>
+                            <p>Email</p>
+                        </div>
+                        <div><input type="text" placeholder="### ### ###"></div>
+                    </div>
+                </div>
+                <div class="b">
+                    <h1>User Group</h1>
+                </div>
+                <div class="g">
+                    <div>
+                        <div>
+                            <p>User Type</p>
+                        </div>
+                        <div class="custom-select-wrapper">
+                            <select>
+                                <option selected disabled>Select status</option>
+                                <option value="1">Librarian</option>
+                                <option value="2">Library Staff</option>
+                            </select>
                         </div>
                     </div>
-
+                    <div>
+                    </div>
                 </div>
+
                 <div class="i">
                     <button id="discard-edit-btn">Discard</button>
                     <button>Save Details</button>
@@ -257,7 +274,7 @@
                     <input type="date" id="date-input">
                 </div>
                 <div class="header-button">
-                    <button id="add-modules-btn">+ Add New Modules</button>
+                    <button id="add-user-btn">+ Add New User</button>
                 </div>
             </div>
             <div class="main-lower">
@@ -271,7 +288,7 @@
                     <div style="width: 80px;">Actions</div>
                 </div>
                 <div class="table-contents">
-                
+
                     <div>
                         <div><input type="checkbox" name="" id=""></div>
                         <div style="width: 15%;">
@@ -296,7 +313,7 @@
                             <i class='bx bxs-chevron-right'></i>
                         </div>
                     </div>
-                
+
                     <div>
                         <div><input type="checkbox" name="" id=""></div>
                         <div style="width: 15%;">
@@ -321,7 +338,7 @@
                             <i class='bx bxs-chevron-right'></i>
                         </div>
                     </div>
-                
+
                     <div>
                         <div><input type="checkbox" name="" id=""></div>
                         <div style="width: 15%;">
@@ -346,7 +363,7 @@
                             <i class='bx bxs-chevron-right'></i>
                         </div>
                     </div>
-                
+
                     <div>
                         <div><input type="checkbox" name="" id=""></div>
                         <div style="width: 15%;">
@@ -371,7 +388,7 @@
                             <i class='bx bxs-chevron-right'></i>
                         </div>
                     </div>
-                
+
                     <div>
                         <div><input type="checkbox" name="" id=""></div>
                         <div style="width: 15%;">
@@ -396,7 +413,7 @@
                             <i class='bx bxs-chevron-right'></i>
                         </div>
                     </div>
-                
+
                 </div>
 
             </div>
@@ -464,12 +481,21 @@
         document.getElementById("nav-modules").addEventListener("click", function () {
             window.location.href = "./modules.html";
         });
-        document.getElementById("add-modules-btn").addEventListener("click", function () {
-            window.location.href = "./add-modules.html";
+        document.getElementById("add-user-btn").addEventListener("click", function () {
+            window.location.href = "./add-user.html";
         });
-         document.getElementById("nav-librarian").addEventListener("click", function () {
-                window.location.href = "./librarian&users.html";
+        document.getElementById("nav-librarian").addEventListener("click", function () {
+            window.location.href = "./librarian&users.html";
+        });
+        document.getElementById("nav-indexes").addEventListener("click", function () {
+            window.location.href = "./biblio-index.html";
+        });
+         document.getElementById("nav-user-group").addEventListener("click", function () {
+                window.location.href = "./user-group.html";
             });
+            document.getElementById("nav-holiday").addEventListener("click", function () {
+                    window.location.href = "./holiday-setting.html";
+                });
     </script>
     <script src="../script/report&analytics-graph-data.js"></script>
 </body>
