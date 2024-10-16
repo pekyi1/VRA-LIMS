@@ -5,14 +5,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/sidebar.css">
-    <link rel="stylesheet" href="css/add-modules.css">
-    <link rel="stylesheet" href="css/systems-index.css">
+    <link rel="stylesheet" href="css/librarian&users.css">
+    <link rel="stylesheet" href="css/edit-modal.css">
     <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Systems</title>
 </head>
 
 <body>
+    <div class="edit-modal">
+        <section class="edit-content">
+            <div class="main-right">
+                <div class="a" id="back-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                        <path
+                            d="M16.0433 0.891113C7.38412 0.891113 0.327942 6.66301 0.327942 13.7748C0.327942 20.8737 7.38412 26.6585 16.0433 26.6585C24.7181 26.6585 31.7586 20.8737 31.7586 13.7748C31.7586 6.78355 24.9547 1.08716 16.4829 0.896066L16.0433 0.891113Z"
+                            fill="white" />
+                        <path opacity="0.5"
+                            d="M25.978 28.3204C26.8805 29.1294 26.8805 30.4405 26.0081 31.2774C25.5569 31.6959 24.9853 31.8911 24.3836 31.8911C23.8121 31.8911 23.2405 31.6959 22.8193 31.2774L12.3205 21.5975C11.8994 21.207 11.6587 20.677 11.6587 20.119C11.6587 19.5611 11.8994 19.0311 12.3205 18.6406L22.8193 8.96067C23.6917 8.12379 25.1056 8.12379 26.0081 8.96067C26.8805 9.76965 26.8805 11.1087 25.978 11.9176L17.1036 20.119L25.978 28.3204Z"
+                            fill="#030229" />
+                    </svg>
+                </div>
+                <div class="b">
+                    <h1>New Modules Details</h1>
+                </div>
+                <form action="">
+                    <div>
+                        <label for="">Module Name</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label for="">Module Description</label>
+                        <textarea name="" id=""></textarea>
+                    </div>
+                </form>
+                <div class="h">
+                    <div>
+                        <div>
+                            <p>Enable Module</p>
+                        </div>
+                        <div class="radio-selects">
+                            <form>
+                                <label>
+                                    <input type="radio" name="option" value="1" checked>
+                                    Yes
+                                </label><br>
+
+                                <label>
+                                    <input type="radio" name="option" value="2">
+                                    No
+                                </label><br>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="i">
+                    <button id="discard-edit-btn">Discard</button>
+                    <button>Save Details</button>
+                </div>
+            </div>
+        </section>
+    </div>
     <nav class="sidebar">
         <div class="side-upper">
             <img src="../image-components/xdtf83ivu5_vra_logo-removebg-preview 1.png" alt="">
@@ -121,7 +175,7 @@
     </nav>
     <nav class="header">
         <div class="header-left">
-            <h1 style="color: #CCD1D2;">System<span style="color: #1B3764;"> >>Content</span></h1>
+            <h1 style="color: #CCD1D2;">System<span style="color: #1B3764;"> >>Librarian & Users</span></h1>
         </div>
         <div class="header-middle">
             <div class="input-box">
@@ -172,16 +226,16 @@
             <div id="nav-systems-config" class="systems-option">
                 <p>System Configuration</p>
             </div>
-            <div id="nav-content" class="systems-option">
+            <div id="nav-content" class="systems-option ">
                 <p>Content</p>
             </div>
             <div id="nav-indexes" class="systems-option">
                 <p>Biblio Indexes</p>
             </div>
-            <div id="nav-modules" class="systems-option  active">
+            <div id="nav-modules" class="systems-option">
                 <p>Modules</p>
             </div>
-            <div id="nav-librarian" class="systems-option">
+            <div id="nav-librarian" class="systems-option active">
                 <p>Librarian & System Users</p>
             </div>
             <div id="nav-user-group" class="systems-option">
@@ -197,58 +251,181 @@
                 <p>Database Backup</p>
             </div>
         </div>
-        <div class="main-right">
-            <div class="a" id="back-btn">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                    <path
-                        d="M16.0433 0.891113C7.38412 0.891113 0.327942 6.66301 0.327942 13.7748C0.327942 20.8737 7.38412 26.6585 16.0433 26.6585C24.7181 26.6585 31.7586 20.8737 31.7586 13.7748C31.7586 6.78355 24.9547 1.08716 16.4829 0.896066L16.0433 0.891113Z"
-                        fill="white" />
-                    <path opacity="0.5"
-                        d="M25.978 28.3204C26.8805 29.1294 26.8805 30.4405 26.0081 31.2774C25.5569 31.6959 24.9853 31.8911 24.3836 31.8911C23.8121 31.8911 23.2405 31.6959 22.8193 31.2774L12.3205 21.5975C11.8994 21.207 11.6587 20.677 11.6587 20.119C11.6587 19.5611 11.8994 19.0311 12.3205 18.6406L22.8193 8.96067C23.6917 8.12379 25.1056 8.12379 26.0081 8.96067C26.8805 9.76965 26.8805 11.1087 25.978 11.9176L17.1036 20.119L25.978 28.3204Z"
-                        fill="#030229" />
-                </svg>
-            </div>
-            <div class="b">
-                <h1>New Modules Details</h1>
-            </div>
-            <form action="">
+        <div style="background: #F7F7F8;" class="main-right">
+            <div class="right-header">
                 <div>
-                    <label for="">Module Name</label>
-                    <input type="text">
+                    <input type="date" id="date-input">
                 </div>
-                <div>
-                    <label for="">Module Description</label>
-                    <textarea name="" id=""></textarea>
+                <div class="header-button">
+                    <button id="add-modules-btn">+ Add New Modules</button>
                 </div>
-            </form>
-            <div class="h">
-                <div>
+            </div>
+            <div class="main-lower">
+                <div class="header-row">
+                    <div><input type="checkbox" name="" id=""></div>
+                    <div style="width: 15%;">Name</div>
+                    <div style="width: 15%;">Username</div>
+                    <div style="width: 15%;">User Type</div>
+                    <div style="width: 15%;">Last Login</div>
+                    <div style="width: 15%;">Last Update</div>
+                    <div style="width: 80px;">Actions</div>
+                </div>
+                <div class="table-contents">
+                
                     <div>
-                        <p>Enable Module</p>
+                        <div><input type="checkbox" name="" id=""></div>
+                        <div style="width: 15%;">
+                            <p>Blessing Tetteh</p>
+                        </div>
+                        <div style="width: 15%;">
+                            <p>Blessing Tetteh</p>
+                        </div>
+                        <div style="width: 15%;">
+                            <p>Library Staff</p>
+                        </div>
+                        <div style="width: 15%;">
+                            <p>2015-08-07 - 15:19</p>
+                        </div>
+                        <div style="width: 15%;">
+                            <p>2015-08-07</p>
+                        </div>
+                        <div style="width: 80px;">
+                            <i class='bx bx-edit'></i>
+                            <i class='bx bx-trash-alt'></i>
+                            <i class='bx bx-printer'></i>
+                            <i class='bx bxs-chevron-right'></i>
+                        </div>
                     </div>
-                    <div class="radio-selects">
-                        <form>
-                            <label>
-                                <input type="radio" name="option" value="1" checked>
-                                Yes
-                            </label><br>
-            
-                            <label>
-                                <input type="radio" name="option" value="2">
-                                No
-                            </label><br>
-                        </form>
+                
+                    <div>
+                        <div><input type="checkbox" name="" id=""></div>
+                        <div style="width: 15%;">
+                            <p>Blessing Tetteh</p>
+                        </div>
+                        <div style="width: 15%;">
+                            <p>Blessing Tetteh</p>
+                        </div>
+                        <div style="width: 15%;">
+                            <p>Librarian</p>
+                        </div>
+                        <div style="width: 15%;">
+                            <p>2015-08-07 - 15:19</p>
+                        </div>
+                        <div style="width: 15%;">
+                            <p>2015-08-07</p>
+                        </div>
+                        <div style="width: 80px;">
+                            <i class='bx bx-edit'></i>
+                            <i class='bx bx-trash-alt'></i>
+                            <i class='bx bx-printer'></i>
+                            <i class='bx bxs-chevron-right'></i>
+                        </div>
                     </div>
+                
+                    <div>
+                        <div><input type="checkbox" name="" id=""></div>
+                        <div style="width: 15%;">
+                            <p>Constance Annan</p>
+                        </div>
+                        <div style="width: 15%;">
+                            <p>Constance.an</p>
+                        </div>
+                        <div style="width: 15%;">
+                            <p>Library Staff</p>
+                        </div>
+                        <div style="width: 15%;">
+                            <p>2015-08-07 - 15:19</p>
+                        </div>
+                        <div style="width: 15%;">
+                            <p>2015-08-07</p>
+                        </div>
+                        <div style="width: 80px;">
+                            <i class='bx bx-edit'></i>
+                            <i class='bx bx-trash-alt'></i>
+                            <i class='bx bx-printer'></i>
+                            <i class='bx bxs-chevron-right'></i>
+                        </div>
+                    </div>
+                
+                    <div>
+                        <div><input type="checkbox" name="" id=""></div>
+                        <div style="width: 15%;">
+                            <p>Blessing Tetteh</p>
+                        </div>
+                        <div style="width: 15%;">
+                            <p>Blessing Tetteh</p>
+                        </div>
+                        <div style="width: 15%;">
+                            <p>Librarian</p>
+                        </div>
+                        <div style="width: 15%;">
+                            <p>2015-08-07 - 15:19</p>
+                        </div>
+                        <div style="width: 15%;">
+                            <p>2015-08-07</p>
+                        </div>
+                        <div style="width: 80px;">
+                            <i class='bx bx-edit'></i>
+                            <i class='bx bx-trash-alt'></i>
+                            <i class='bx bx-printer'></i>
+                            <i class='bx bxs-chevron-right'></i>
+                        </div>
+                    </div>
+                
+                    <div>
+                        <div><input type="checkbox" name="" id=""></div>
+                        <div style="width: 15%;">
+                            <p>Roselind Owusu</p>
+                        </div>
+                        <div style="width: 15%;">
+                            <p>Roselind.Rose</p>
+                        </div>
+                        <div style="width: 15%;">
+                            <p>Library Staff</p>
+                        </div>
+                        <div style="width: 15%;">
+                            <p>2015-08-07 - 15:19</p>
+                        </div>
+                        <div style="width: 15%;">
+                            <p>2015-08-07</p>
+                        </div>
+                        <div style="width: 80px;">
+                            <i class='bx bx-edit'></i>
+                            <i class='bx bx-trash-alt'></i>
+                            <i class='bx bx-printer'></i>
+                            <i class='bx bxs-chevron-right'></i>
+                        </div>
+                    </div>
+                
                 </div>
-               
+
             </div>
-            <div class="i">
-                <button id="discard-btn">Discard</button>
-                <button>Save Details</button>
-            </div>
+
         </div>
     </section>
-    <script src="../script/edit-modal.js"></script>
+    <div class="disclaimer-modal">
+        <div class="discard-disclaimer">
+            <div><i class='bx bx-x' id="discard-close"></i></div>
+            <div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+                        <path
+                            d="M15.1667 2.33325V19.2499H12.8334V2.33325H15.1667ZM12.8334 22.1666H15.1714V24.5046H12.8334V22.1666Z"
+                            fill="#FF3932" />
+                    </svg>
+                </div>
+                <div>
+                    <p>Sure you want to Discard it?</p>
+                    <p>Are you sure you want to discard this information</p>
+                </div>
+            </div>
+            <div>
+                <button id="cancel-disclaimer">No, cancel</button>
+                <button class="confirm">Yes, confirm</button>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/edit-modal.js"></script>
     <script src="../script/header.js"></script>
     <script>
         document.getElementById("dashboard").addEventListener("click", function () {
@@ -284,18 +461,15 @@
         document.getElementById("nav-content").addEventListener("click", function () {
             window.location.href = "./content.html";
         });
-        document.getElementById("nav-librarian").addEventListener("click", function () {
-                window.location.href = "./librarian&users.html";
-            });
-        document.getElementById("back-btn").addEventListener("click", function () {
-            window.location.href = "./modules.html";
-        });
-        document.getElementById("discard-btn").addEventListener("click", function () {
-            window.location.href = "./modules.html";
-        });
         document.getElementById("nav-modules").addEventListener("click", function () {
             window.location.href = "./modules.html";
         });
+        document.getElementById("add-modules-btn").addEventListener("click", function () {
+            window.location.href = "./add-modules.html";
+        });
+         document.getElementById("nav-librarian").addEventListener("click", function () {
+                window.location.href = "./librarian&users.html";
+            });
     </script>
     <script src="../script/report&analytics-graph-data.js"></script>
 </body>
