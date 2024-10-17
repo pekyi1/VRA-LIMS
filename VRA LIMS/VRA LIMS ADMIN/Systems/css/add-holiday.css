@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+.main-right {
+    margin-top: 25px;
+}
+
+.a {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 10px;
+}
+
+.a svg path {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+.b {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 10px 35px;
+}
+
+.b h1 {
+    color: #003459;
+    font-family: Lato;
+    font-size: 20px;
+    margin: 0;
+}
+
+.e,
+.g,
+.d {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    padding: 10px 35px;
+}
+
+.d>div:first-of-type,
+.d>div:nth-of-type(2),
+.e>div:first-of-type,
+.e>div:nth-of-type(2),
+.h>div:first-of-type,
+.h>div:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 450%;
+}
+
+.d>div>div:nth-of-type(2),
+.e>div>div:nth-of-type(2),
+.h>div>div:nth-of-type(2) {
+    height: 50px;
+}
+
+
+.e p,
+.g p,
+.d p{
+    font-size: 13.5px;
+    color: #4B4B4B;
+    font-family: Poppins;
+    margin: 7px 0;
+}
+
+.d>div>p,
+.e>div>p,
+.h>div>p {
+    font-size: 13.5px;
+    color: #4B4B4B;
+    font-family: Poppins;
+    margin: 7px 0;
+}
+
+.d div input,
+.e div input,
+.d div textarea {
+    width: 80%;
+    height: 100%;
+    border: 1px solid #CACACA;
+    border-radius: 10px;
+    padding: 0 40px;
+    color: #003459;
+}
+.d div textarea{
+    padding: 20px;
+}
+
+.e div input[type="date"] {
+    border: none;
+    color: #667479;
+    appearance: none;
+}
+
+.d div input:focus,
+.e div input:focus,
+.d div textarea:focus {
+    border: 1.5px solid #1B3764;
+    outline: none;
+}
+
+.d div input::placeholder,
+.e div input::placeholder {
+    color: #CACACA;
+    font-size: 14px;
+    font-family: Inter;
+}
+
+.e div input[type="date"] {
+    border: none;
+    color: #667479;
+    appearance: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+    width: 100%;
+}
+
+/* Hide the default calendar icon in WebKit browsers */
+.e div input[type="date"]::-webkit-calendar-picker-indicator {
+    background: url('https://img.icons8.com/material-outlined/24/000000/calendar--v1.png') no-repeat;
+    background-size: 16px 16px;
+    color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    position: relative;
+}
+
+/* Remove the default appearance on different browsers */
+.e div input[type="date"]::-webkit-inner-spin-button,
+.e div input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+.e div input[type="date"] {
+    appearance: none;
+    /* Removes default styling */
+    -webkit-appearance: none;
+    /* Safari */
+    -moz-appearance: textfield;
+    /* Firefox */
+}
+
+/* Add padding to the left to make space for the calendar icon */
+.e div input[type="date"] {
+    position: relative;
+}
+
+/* For Firefox, we need to remove the default icon */
+.e div input[type="date"]::-moz-focus-inner {
+    border: 0;
+}
+
+.e>div:first-of-type>div:nth-of-type(2),
+.e>div:nth-of-type(2)>div:nth-of-type(2) {
+    position: relative;
+    width: 80%;
+    border: 1px solid #CACACA;
+    border-radius: 10px;
+    padding: 0 40px;
+    color: #003459;
+}
+
+.e>div:first-of-type>div:nth-of-type(2) .calendar,
+.e>div:nth-of-type(2)>div:nth-of-type(2) .calendar {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.e>div:first-of-type>div:nth-of-type(2) .close,
+.e>div:nth-of-type(2)>div:nth-of-type(2) .close {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.e>div:first-of-type>div:nth-of-type(2) i,
+.e>div:nth-of-type(2)>div:nth-of-type(2) i {
+    color: #AAAAAA;
+    cursor: pointer;
+}
+
+.e>div:first-of-type>div:nth-of-type(2) #year,
+.e>div:nth-of-type(2)>div:nth-of-type(2) #year {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.e select {
+    background-color: transparent;
+    border: none;
+    font-size: 17px;
+    font-family: Arial, sans-serif;
+    color: #003049;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.e select:hover,
+.e select:focus {
+    outline: none;
+    border-color: #003049;
+}
+
+
+.i {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    padding: 10px 35px;
+}
+
+.i button {
+    color: #0F3659;
+    width: 120px;
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid #C3D3E2;
+    background: none;
+    cursor: pointer;
+    transition: .15s ease;
+    margin-left: 15px;
+}
+
+.i button:hover {
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.i>button:nth-of-type(2) {
+    background: #003459;
+    color: #fff;
+    margin-right: 20px;
+}
