@@ -120,6 +120,7 @@
     </nav>
     <nav class="header">
         <div class="header-left">
+            <i class='bx bx-arrow-back' tooltip="hide sidebar" id="toggle-btn"></i>
             <h1>Report & Analytics</h1>
         </div>
         <div class="header-middle">
@@ -165,7 +166,7 @@
     </nav>
 
 
-    <section class="Borrowing-section">
+    <section class="All-section">
         <div class="upper-header">
             <div class="upper-header-left">
                 <!-- Upper header left content here (if needed) -->
@@ -188,7 +189,7 @@
                 <div id="nav-all">
                     <p>All</p>
                 </div>
-                <div  id="nav-borrowing">
+                <div id="nav-borrowing">
                     <p>Borrowing</p>
                 </div>
                 <div class="active" id="nav-inventory">
@@ -261,18 +262,18 @@
                     </div>
                 </div>
                 <div class="left-lower">
-                <div class="accession-level-soft-graph">
-                    <div>
+                    <div class="accession-level-soft-graph">
                         <div>
-                            <h3>Accession Level</h3>
+                            <div>
+                                <h3>Accession Level</h3>
+                            </div>
+                            <div class="graph-button">
+
+                                <button><span><i class='bx bx-export'></i></span> Export</button>
+                            </div>
                         </div>
-                        <div class="graph-button">
-                            
-                            <button><span><i class='bx bx-export'></i></span> Export</button>
-                        </div>
+                        <canvas id="accessionLevelChart" width="400" height="200"></canvas>
                     </div>
-                    <canvas id="accessionLevelChart" width="400" height="200"></canvas>
-                </div>
                 </div>
             </div>
             <div class="main-right">
@@ -314,7 +315,7 @@
         </div>
 
     </section>
-
+    <script src="scripts/sidebar.js"></script>
     <script src="../script/edit-modal.js"></script>
     <script src="../script/header.js"></script>
     <script>
@@ -343,8 +344,8 @@
             window.location.href = "report-and-analytics(All).html";
         });
         document.getElementById("systems").addEventListener("click", function () {
-                window.location.href = "../Systems/systems-index.html";
-            });
+            window.location.href = "../Systems/systems-index.html";
+        });
         document.getElementById("nav-all").addEventListener("click", function () {
             window.location.href = "report-and-analytics(All).html";
         });
