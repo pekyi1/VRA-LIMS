@@ -18,6 +18,10 @@ body {
     height: 100%;
     background: #F7F7F8;
     gap: 30px;
+    transition: 0.3s ease;
+}
+.main-section.longer {
+    width: 100%;
 }
 
 .systems-sidebar{
