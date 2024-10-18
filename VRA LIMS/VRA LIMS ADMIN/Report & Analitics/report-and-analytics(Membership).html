@@ -120,6 +120,7 @@
     </nav>
     <nav class="header">
         <div class="header-left">
+            <i class='bx bx-arrow-back' tooltip="hide sidebar" id="toggle-btn"></i>
             <h1>Report & Analytics</h1>
         </div>
         <div class="header-middle">
@@ -165,7 +166,7 @@
     </nav>
 
 
-    <section class="Borrowing-section">
+    <section class="All-section">
         <div class="upper-header">
             <div class="upper-header-left">
                 <!-- Upper header left content here (if needed) -->
@@ -194,7 +195,7 @@
                 <div id="nav-inventory">
                     <p>Inventory</p>
                 </div>
-                <div  id="nav-overdue">
+                <div id="nav-overdue">
                     <p>Overdue</p>
                 </div>
                 <div class="active" id="nav-membership">
@@ -253,7 +254,7 @@
         </div>
 
     </section>
-
+    <script src="scripts/sidebar.js"></script>
     <script src="../script/edit-modal.js"></script>
     <script src="../script/header.js"></script>
     <script>
@@ -281,7 +282,7 @@
         document.getElementById("report").addEventListener("click", function () {
             window.location.href = "report-and-analytics(All).html";
         });
-       document.getElementById("systems").addEventListener("click", function () {
+        document.getElementById("systems").addEventListener("click", function () {
             window.location.href = "../Systems/systems-index.html";
         });
         document.getElementById("nav-all").addEventListener("click", function () {

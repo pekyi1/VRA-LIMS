@@ -7,7 +7,7 @@ body {
 }
 
 /* MAIN SECTION STYLES */
-.Borrowing-section {
+.All-section {
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -17,6 +17,10 @@ body {
     /* border: 1px solid black; */
     height: 100%;
     background: #F7F7F8;
+    transition: 0.3s ease;
+}
+.All-section.longer {
+    width: 100%;
 }
 
 .main-content {

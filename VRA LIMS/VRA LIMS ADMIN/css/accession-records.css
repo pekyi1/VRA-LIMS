@@ -18,6 +18,11 @@ body {
     /* border: 1px solid black; */
     height: 100%;
     background: #F7F7F8;
+    transition: 0.3s ease;
+}
+.main-content.longer{
+    left: 0;
+    width: 100%;
 }
 
 .main-upper {
