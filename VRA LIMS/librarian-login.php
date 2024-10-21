@@ -1,31 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/librarian-login.css">
-    <title>Librarian Login</title>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <nav>
-                <div class="logo">
-                    <img src="image-componets/xdtf83ivu5_vra_logo-removebg-preview 1.png" alt="LIMS Logo">
-                    <span>LiMS</span>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Users Books</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </nav>
-            <div class="nav-buttons">
-                <div class="librarian-login">Librarian Login</div>
-                <div class="user-login">User Login</div>  <div class="hamburger">
-                    &#9776;
-        </header>
+<?php include ('partials/menu.php'); ?>
+
     
         <section class="intro-section">
             <div class="intro-text">

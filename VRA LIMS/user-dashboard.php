@@ -1,30 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VRA Library</title>
-    <link rel="stylesheet" href="css/user-dashboard.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="image-componets/xdtf83ivu5_vra_logo-removebg-preview 1.png" alt="LIMS Logo">
-                <span>LiMS</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Users Books</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>                
-            </ul>
-        </nav>
-        <div class="nav-buttons">
-            <div class="librarian-login">Librarian Login</div> 
-            <div class="user-login">User Login</div>
-        </div>
-    </header>
+
+<?php include ('partials/menu.php'); ?>
+
     
     <main>
         <section class="hero">

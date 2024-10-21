@@ -747,7 +747,7 @@ section.book>div:nth-of-type(2) {
 /* Footer */
 footer {
     text-align: center;
-    width: 100vw;
+    
     padding: 20px;
     background-color: #0a2b52;
     color: white;

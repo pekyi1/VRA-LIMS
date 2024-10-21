@@ -309,7 +309,7 @@ nav ul li a {
 .book-item button {
     background-color: #ffffff;
     border: 1px solid #ffd700;
-    width: 250px;
+     width: 250px;
     height: 40px;
     color: #0a2b52;
     border-radius: 5px;
@@ -337,5 +337,5 @@ footer {
     background-color: #0a2b52;
     color: white;
     font-size: 0.8rem;
-        overflow-x: hidden;
+    overflow-x: hidden;
 }

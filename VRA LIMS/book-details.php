@@ -1,31 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/book-details.css">
-    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
-    <title>Book Details</title>
-</head>
-<header>
-    <nav>
-        <div class="logo">
-            <img src="image-componets/xdtf83ivu5_vra_logo-removebg-preview 1.png" alt="LIMS Logo">
-            <span>LiMS</span>
-        </div>
-        <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Users Books</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-    <div class="nav-buttons">
-        <div class="librarian-login">Librarian Login</div>
-        <div class="user-login">User Login</div>  <div class="hamburger">
-            &#9776;
-        </div>
-</header>
+<?php include ('partials/menu.php'); ?>
+
+
 <body>
     <div class="sign-in-overlay" id="sign-in-overlay">
         <div class="sign-in-modal">
@@ -174,9 +149,11 @@
                 </div>
             </div>
         </section>
+
         <footer>
             <p>&copy; Volta River Authority | Library Management System</p>
         </footer>
+        
     </main>
     
 
