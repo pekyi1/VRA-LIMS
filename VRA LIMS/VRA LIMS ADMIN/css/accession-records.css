@@ -133,9 +133,15 @@ body {
 .upper-middle input[type="date"]::-moz-focus-inner {
     border: 0;
 }
+.upper-right{
+    display: flex;
+    flex-direction: row;
+}
 
 .upper-right button{
-    padding: 17px 40px;
+    padding: 7px 25px;
+    margin-right: 6px;
+    font-size: 12px;
     cursor: pointer;
     border: none;
     background-color: rgba(0, 149, 255, 0.10);
