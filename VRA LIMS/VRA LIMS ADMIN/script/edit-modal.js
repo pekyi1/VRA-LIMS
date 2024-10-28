@@ -35,3 +35,26 @@ cancelDisclaimer.addEventListener('click', () => {
 confirmDis.addEventListener('click', () => {
   hideBothModals();
 });
+
+// Get the modal, button, and close elements
+const addAuthorModal = document.getElementById('add-author-modal');
+const addPublisherModal = document.getElementById('add-publisher-modal');
+const addAuthor = document.getElementById('add-author');
+const addPublisher = document.getElementById('add-publisher');
+const closeAddAuthorModal1 = document.getElementById('closeAuthorModal1');
+const closeAddAuthorModal2 = document.getElementById('closeAuthorModal2');
+
+// When the "Join as a Volunteer" button is clicked, open the modal
+addAuthor.addEventListener('click', () => {
+  addAuthorModal.style.display = 'flex';
+});
+addPublisher.addEventListener('click', () => {
+  addPublisherModal.style.display = 'flex';
+});
+// When the close button is clicked, close the modal
+closeAddAuthorModal1.addEventListener('click', () => {
+  addAuthorModal.style.display = 'none';
+});
+closeAddAuthorModal2.addEventListener('click', () => {
+  addPublisherModal.style.display = 'none';
+});

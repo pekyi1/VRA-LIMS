@@ -13,6 +13,24 @@
 </head>
 
 <body>
+    <!-- add books modal -->
+    <div class="add-author-modal" id="add-author-modal" style="display: none;">
+        <div class="add-author-modal-content">
+            <span class="close-modal" id="closeAuthorModal1">&times;</span>
+            <p>Add An Author</p>
+            <input type="text" placeholder="William Shakespeare">
+            <button>Add</button>
+        </div>
+    </div>
+    <!-- add publisher modal -->
+    <div class="add-author-modal" id="add-publisher-modal" style="display: none;">
+        <div class="add-author-modal-content">
+            <span class="close-modal" id="closeAuthorModal2">&times;</span>
+            <p>Add A Publisher</p>
+            <input type="text" placeholder="William Shakespeare">
+            <button>Add</button>
+        </div>
+    </div>
     <div class="edit-modal">
         <section class="edit-content">
         <section class="sub-section">
@@ -353,9 +371,9 @@
             <div class="upper-middle">
             </div>
             <div class="upper-right">
-                <button >+ ADD PUBLISHER</button>
-                <button >+ ADD AUTHOR</button>
-                <button id="add-book-btn">+ ADD BOOK</button>
+                <button id="add-publisher">+ ADD PUBLISHER</button>
+                <button id="add-author">+ ADD AUTHOR</button>
+                <button id="add-author-btn">+ ADD BOOK</button>
             </div>
         </div>
         <div class="main-middle">
@@ -745,8 +763,8 @@
         document.getElementById("accession-records-hard").addEventListener("click", function () {
             window.location.href = "accession-records.html";
         });
-        document.getElementById("add-book-btn").addEventListener("click", function () {
-            window.location.href = "add-book.html";
+        document.getElementById("add-author-btn").addEventListener("click", function () {
+            window.location.href = "add-author.html";
         });
         document.getElementById("accession-records-soft").addEventListener("click", function () {
             window.location.href = "accession-records(ebooks).html";
